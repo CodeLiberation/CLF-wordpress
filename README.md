@@ -8,3 +8,7 @@ If you need a free LESS compiler, use [SimpLESS](http://wearekiss.com/simpless).
 
 * Go into `themes/CLF/library/less`, drag `ie`,`login`, and `style.less` into your LESS compiler.
 * Set each file to compile in its respective .css file in the `css` folder.
+
+###Plugins
+* Events Organiser
+* MailChimp Widget
