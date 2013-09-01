@@ -929,8 +929,12 @@ h5,
 /*********************
 06. HEADER STYLES
 *********************/
-.header #logo {
+.header #logo a {
   font-size: 0;
+  background: url(../images/logo.png);
+  width: 206px;
+  height: 152px;
+  display: block;
 }
 /*********************
 07. NAVIGATION STYLES

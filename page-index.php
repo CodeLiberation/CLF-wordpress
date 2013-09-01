@@ -28,14 +28,14 @@ Template Name: Home Page
 
 								<section class="entry-content clearfix" itemprop="articleBody">
 									<?php the_content(); ?>
+									
 								</section> <!-- end article section -->
+								<?php get_sidebar(); ?>
 
 								<footer class="article-footer">
 									<p class="clearfix"><?php the_tags('<span class="tags">' . __('Tags:', 'bonestheme') . '</span> ', ', ', ''); ?></p>
 
 								</footer> <!-- end article footer -->
-
-								<?php comments_template(); ?>
 
 							</article> <!-- end article -->
 
@@ -57,7 +57,6 @@ Template Name: Home Page
 
 						</div> <!-- end #main -->
 
-						<?php get_sidebar(); ?>
 
 				</div> <!-- end #inner-content -->
 
