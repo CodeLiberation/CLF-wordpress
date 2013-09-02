@@ -563,7 +563,7 @@ TYPOGRAPHY
   font-family: 'Bariol';
   src: url('../fonts/bariol_light.eot');
   src: url('../fonts/bariol_light.eot?#iefix') format('embedded-opentype'), url('../fonts/bariol_light.woff') format('woff'), url('../fonts/bariol_light.ttf') format('truetype');
-  font-weight: lighter;
+  font-weight: 100;
 }
 @font-face {
   font-family: 'Bariol';
@@ -652,92 +652,74 @@ BUTTONS
 *********************/
 .button,
 .button:visited {
-  border: 1px solid #be0d37;
-  border-top-color: #db0f3f;
-  border-left-color: #db0f3f;
-  padding: 4px 12px;
+  background: #5bc8e4;
+  border: 0;
+  padding: 15px 30px;
   color: #ffffff;
   display: inline-block;
-  font-size: 11px;
-  font-weight: bold;
+  font-size: 24px;
+  font-family: "Bariol", Helvetica, Arial, sans-serif;
+  font-weight: normal;
   text-decoration: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+  text-transform: lowercase;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-top: 12px;
   line-height: 21px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  background-color: #e40f42;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f01d4f), to(#e40f42));
-  background-image: -webkit-linear-gradient(top, #f01d4f, #e40f42);
-  background-image: -moz-linear-gradient(top, #f01d4f, #e40f42);
-  background-image: -o-linear-gradient(top, #f01d4f, #e40f42);
-  background-image: linear-gradient(to bottom, #f01d4f, #e40f42);
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  float: right;
 }
 .button:hover,
 .button:visited:hover,
 .button:focus,
 .button:visited:focus {
   color: #ffffff;
-  border: 1px solid #be0d37;
-  border-top-color: #9d0a2d;
-  border-left-color: #9d0a2d;
-  background-color: #cc0e3b;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e40f42), to(#cc0e3b));
-  background-image: -webkit-linear-gradient(top, #e40f42, #cc0e3b);
-  background-image: -moz-linear-gradient(top, #e40f42, #cc0e3b);
-  background-image: -o-linear-gradient(top, #e40f42, #cc0e3b);
-  background-image: linear-gradient(to bottom, #e40f42, #cc0e3b);
+  background: #87d7eb;
 }
 .button:active,
 .button:visited:active {
-  background-color: #f01d4f;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e40f42), to(#f01d4f));
-  background-image: -webkit-linear-gradient(top, #e40f42, #f01d4f);
-  background-image: -moz-linear-gradient(top, #e40f42, #f01d4f);
-  background-image: -o-linear-gradient(top, #e40f42, #f01d4f);
-  background-image: linear-gradient(to bottom, #e40f42, #f01d4f);
+  background: #2fb9dd;
 }
 .blue-button,
 .blue-button:visited {
-  border-color: #1472ad;
-  text-shadow: 0 1px 1px #1472ad;
-  background-color: #1681c4;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1990db), to(#1681c4));
-  background-image: -webkit-linear-gradient(top, #1990db, #1681c4);
-  background-image: -moz-linear-gradient(top, #1990db, #1681c4);
-  background-image: -o-linear-gradient(top, #1990db, #1681c4);
-  background-image: linear-gradient(to bottom, #1990db, #1681c4);
-  -webkit-box-shadow: inset 0 0 3px #59b3ec;
-  -moz-box-shadow: inset 0 0 3px #59b3ec;
-  box-shadow: inset 0 0 3px #59b3ec;
+  border-color: #2fb9dd;
+  text-shadow: 0 1px 1px #2fb9dd;
+  background-color: #45c1e0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5bc8e4), to(#45c1e0));
+  background-image: -webkit-linear-gradient(top, #5bc8e4, #45c1e0);
+  background-image: -moz-linear-gradient(top, #5bc8e4, #45c1e0);
+  background-image: -o-linear-gradient(top, #5bc8e4, #45c1e0);
+  background-image: linear-gradient(to bottom, #5bc8e4, #45c1e0);
+  -webkit-box-shadow: inset 0 0 3px #a1dff0;
+  -moz-box-shadow: inset 0 0 3px #a1dff0;
+  box-shadow: inset 0 0 3px #a1dff0;
 }
 .blue-button:hover,
 .blue-button:visited:hover,
 .blue-button:focus,
 .blue-button:visited:focus {
-  border-color: #116396;
-  background-color: #1472ad;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1784c9), to(#1472ad));
-  background-image: -webkit-linear-gradient(top, #1784c9, #1472ad);
-  background-image: -moz-linear-gradient(top, #1784c9, #1472ad);
-  background-image: -o-linear-gradient(top, #1784c9, #1472ad);
-  background-image: linear-gradient(to bottom, #1784c9, #1472ad);
+  border-color: #22add0;
+  background-color: #2fb9dd;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#49c2e1), to(#2fb9dd));
+  background-image: -webkit-linear-gradient(top, #49c2e1, #2fb9dd);
+  background-image: -moz-linear-gradient(top, #49c2e1, #2fb9dd);
+  background-image: -o-linear-gradient(top, #49c2e1, #2fb9dd);
+  background-image: linear-gradient(to bottom, #49c2e1, #2fb9dd);
 }
 .blue-button:active,
 .blue-button:visited:active {
-  background-color: #1990db;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
-  background-image: -webkit-linear-gradient(top, #1681c4, #1990db);
-  background-image: -moz-linear-gradient(top, #1681c4, #1990db);
-  background-image: -o-linear-gradient(top, #1681c4, #1990db);
-  background-image: linear-gradient(to bottom, #1681c4, #1990db);
+  background-color: #5bc8e4;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#45c1e0), to(#5bc8e4));
+  background-image: -webkit-linear-gradient(top, #45c1e0, #5bc8e4);
+  background-image: -moz-linear-gradient(top, #45c1e0, #5bc8e4);
+  background-image: -o-linear-gradient(top, #45c1e0, #5bc8e4);
+  background-image: linear-gradient(to bottom, #45c1e0, #5bc8e4);
 }
 /*
 BASE (MOBILE) SIZE
@@ -785,7 +767,7 @@ body {
   font-family: "Bariol", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  color: #565656;
+  color: #000000;
 }
 /********************
 02. WORDPRESS BODY CLASSES
@@ -835,13 +817,16 @@ body {
 }
 .hero {
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 55px;
   max-width: 650px;
+  border-bottom: 1px dashed #5bc8e4;
+  padding: 0 0 55px;
 }
 .hero h1 {
   font-size: 34px;
-  font-weight: lighter;
+  font-weight: 100;
   margin: 0;
+  color: #666666;
 }
 .hero h1 strong.logotype {
   font-size: 0;
@@ -857,7 +842,7 @@ body {
 *********************/
 a,
 a:visited {
-  color: #f01d4f;
+  color: #ed408c;
   /* on hover */
 
   /* on click */
@@ -869,7 +854,7 @@ a:hover,
 a:visited:hover,
 a:focus,
 a:visited:focus {
-  color: #d10e3c;
+  color: #e91673;
 }
 a:link,
 a:visited:link {
@@ -1359,6 +1344,53 @@ and more scalable.
 	view.
 	*/
 /* end .footer-links */
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=phone],
+input[type=url],
+textarea {
+  background: #e6e6e6;
+  border: 0;
+  font-size: 24px;
+  padding: 15px;
+  font-family: "Bariol", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  color: #666666;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+.home .hero h1 {
+  color: #000000;
+}
+.home .mailing-list {
+  border: 0;
+  padding: 0;
+}
+.home .mailing-list .widget {
+  padding: 0;
+  margin: 0;
+}
+.home .mailing-list .widgettitle {
+  color: #666666;
+  font-size: 24px;
+  font-weight: 100;
+  border-bottom: 0;
+  margin: 0 0 20px;
+}
+.home .mailing-list label {
+  display: none !important;
+}
+.home .mailing-list .error {
+  color: #ed408c;
+  margin: 0 0 10px;
+}
 /*
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's

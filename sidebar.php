@@ -1,4 +1,4 @@
-				<section id="sidebar1" class="mailing-list" role="complementary">
+				<section id="sidebar1" class="mailing-list hero clearfix" role="complementary">
 
 					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
 

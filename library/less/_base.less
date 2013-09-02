@@ -41,7 +41,7 @@ body {
 	font-family: @sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
-	color: #565656;
+	color: @black;
 }
 
 /********************
@@ -93,8 +93,8 @@ body {
 	width: 96%;
 	margin: 0 auto;
 }
-.hero {width:90%; margin:0 auto; max-width:650px;
-	h1 {font-size:@h1-size; font-weight:lighter; margin:0;
+.hero {width:90%; margin:0 auto 55px; max-width:650px; border-bottom:1px dashed @blue; padding:0 0 55px;
+	h1 {font-size:@h1-size; font-weight:100; margin:0; color:@gray;
 		strong.logotype {font-size:0; display:inline-block; width:489px; height:70px; background:url("../images/logotype.png") no-repeat; vertical-align:bottom; margin-bottom:8px;}
 	}
 }
