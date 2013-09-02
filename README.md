@@ -12,3 +12,4 @@ If you need a free LESS compiler, use [SimpLESS](http://wearekiss.com/simpless).
 ###Plugins we use
 * Events Organiser
 * MailChimp Widget
+* Advanced Custom Fields
