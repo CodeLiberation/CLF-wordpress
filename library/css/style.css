@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: Code Liberation
+Author: Phoenix Perry, Catt Small & Nina Freeman
 
 Stylesheet: Main Stylesheet
 
@@ -995,6 +995,11 @@ body {
   color: #666666;
 }
 .hero h1 strong.logotype {
+  -webkit-transition: none 0.2s ease-in-out;
+  -moz-transition: none 0.2s ease-in-out;
+  -ms-transition: none 0.2s ease-in-out;
+  -o-transition: none 0.2s ease-in-out;
+  transition: none 0.2s ease-in-out;
   font-size: 0;
   display: inline-block;
   width: 489px;
@@ -1606,6 +1611,25 @@ textarea:focus {
   margin: 0 0 10px;
 }
 /*
+SMALLER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*/
+@media only screen and (max-width: 560px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+  .hero h1 strong.logotype {
+    background: none;
+    font-size: 24px;
+    width: auto;
+    height: auto;
+    margin-bottom: 0;
+    font-weight: normal;
+  }
+}
+/*
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
 larger than an iPhone but smaller than a tablet. Let's call them
@@ -1693,6 +1717,9 @@ tweeners.
   check your menus here. do they look good?
   do they need tweaking?
   */
+  .footer nav ul.nav {
+    border: 0;
+  }
   /* end .footer-links */
 }
 /*

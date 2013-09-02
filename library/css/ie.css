@@ -488,6 +488,9 @@ FOOTER STYLES
 check your menus here. do they look good?
 do they need tweaking?
 */
+.footer nav ul.nav {
+  border: 0;
+}
 /* end .footer-links */
 /* import grid */
 /******************************************************************
