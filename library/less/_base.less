@@ -93,6 +93,11 @@ body {
 	width: 96%;
 	margin: 0 auto;
 }
+.hero {width:90%; margin:0 auto; max-width:650px;
+	h1 {font-size:@h1-size; font-weight:lighter; margin:0;
+		strong.logotype {font-size:0; display:inline-block; width:489px; height:70px; background:url("../images/logotype.png") no-repeat; vertical-align:bottom; margin-bottom:8px;}
+	}
+}
 #container {}
 
 /*********************
@@ -176,8 +181,8 @@ h5, .h5 {
 .header {
 	#inner-header {}
 
-	#logo {
-		a {font-size:0; background:url(../images/logo.png); width:206px; height:152px; display:block; margin:0 auto 23px;}
+	#logo {margin:75px 0 25px;
+		a {font-size:0; background:url(../images/logo.png) no-repeat; width:206px; height:152px; display:block; margin:0 auto;}
 	}
 
 	nav {
@@ -282,7 +287,6 @@ and more scalable.
 *********************/
 
 #content {
-	margin-top: 2.2em;
 
 	#inner-content {}
 }
