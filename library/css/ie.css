@@ -609,6 +609,10 @@ LAYOUT & GRID STYLES
 /*********************
 HEADER STYLES
 *********************/
+.hero {
+  margin: 0 auto 55px;
+  padding: 0 0 55px;
+}
 /*********************
 NAVIGATION STYLES
 *********************/

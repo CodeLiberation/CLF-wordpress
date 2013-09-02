@@ -983,10 +983,10 @@ body {
 }
 .hero {
   width: 90%;
-  margin: 0 auto 55px;
   max-width: 650px;
   border-bottom: 1px dashed #5bc8e4;
-  padding: 0 0 55px;
+  margin: 0 auto 35px;
+  padding: 0 0 35px;
 }
 .hero h1 {
   font-size: 34px;
@@ -1006,6 +1006,7 @@ body {
   height: 70px;
   background: url("../images/logotype.png") no-repeat;
   vertical-align: bottom;
+  margin-right: 10px;
   margin-bottom: 8px;
 }
 #container {
@@ -1619,6 +1620,7 @@ tweeners.
 @media only screen and (max-width: 560px) {
   .hero h1 {
     font-size: 24px;
+    margin-top: 30px;
   }
   .hero h1 strong.logotype {
     background: none;
@@ -1626,7 +1628,11 @@ tweeners.
     width: auto;
     height: auto;
     margin-bottom: 0;
+    margin-right: 6px;
     font-weight: normal;
+  }
+  .footer nav ul.nav {
+    border: 0;
   }
 }
 /*
@@ -1845,6 +1851,10 @@ you can add resource intensive styles.
   /*********************
   HEADER STYLES
   *********************/
+  .hero {
+    margin: 0 auto 55px;
+    padding: 0 0 55px;
+  }
   /*********************
   NAVIGATION STYLES
   *********************/
