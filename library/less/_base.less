@@ -98,7 +98,7 @@ body {
 		strong.logotype {font-size:0; display:inline-block; width:489px; height:70px; background:url("../images/logotype.png") no-repeat; vertical-align:bottom; margin-bottom:8px;}
 	}
 }
-#container {}
+#container {padding-bottom:100px;}
 
 /*********************
 04. LINK STYLES
@@ -855,14 +855,15 @@ and more scalable.
 13. FOOTER STYLES
 *********************/
 
-.footer {
+.footer {.text-center; border-top:1px solid fade(@gray,15%); background:fade(@white,75%);
 	clear: both;
 	#inner-footer {
 	}
+	p {color:@gray; margin-bottom:0;}
 	nav {
-		ul.nav {
-			li {
-				a {}
+		ul.nav {background:none; margin:0;
+			li {float:none; display:inline-block;
+				a {font-family:@social-icon; .ss-icon; background:none; font-size:@label-size;}
 
 				&:first-child {}
 
