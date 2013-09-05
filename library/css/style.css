@@ -1674,9 +1674,20 @@ textarea:focus {
   border-bottom: 1px solid #e6e6e6;
 }
 .home #content .entry-content.events-classes .events-classes-list li h3 a {
+  color: #5bc8e4;
   padding: 36px 15px;
   display: block;
   text-align: center;
+}
+.home #content .entry-content.events-classes .events-classes-list li h3 a:hover {
+  background: #5bc8e4;
+  color: white;
+  -webkit-border-radius: 12px 12px 0 0;
+  -moz-border-radius: 12px 12px 0 0;
+  border-radius: 12px 12px 0 0;
+}
+.home #content .entry-content.events-classes .events-classes-list li h3 a:active {
+  background: #2fb9dd;
 }
 .home #content .entry-content.events-classes .events-classes-list li .event-info {
   background: #f2f2f2;
