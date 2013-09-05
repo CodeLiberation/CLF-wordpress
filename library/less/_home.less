@@ -1,1 +1,49 @@
 // Index page styles
+.home {
+	#container {padding:0;}
+	.hero {
+		h1 {color:@black;}
+	}
+	.mailing-list {border:0; padding:0;
+		.widget{padding:0; margin:0;}
+		.widgettitle {color:@gray; font-size:@label-size; font-weight:@light-weight; border-bottom:0; margin:0 0 20px;}
+		label {display:none !important;}
+		.error {color:@pink; margin:0 0 10px;}
+	}
+	#content {
+		#inner-content {margin:0;
+			&.wrap {max-width:100%; width:auto;}
+		}
+		.entry-content {padding:45px; .clearfix;
+			.article-header.index-hero {
+				h2 {font-size:@h2-size; line-height:@h2-size; margin:0 0 30px; color:@white; font-weight:@normal-weight;}
+			}
+			&.events-classes {background:@pink;
+				.events-classes-list {margin:0; padding:0; .clearfix;
+					li {background:@white; .border-radius; float:left; width:31.3333%; margin:0 3% 0 0;
+						&:last-child {margin:0;}
+						h3 {font-size:@h2-size; line-height:@h2-size; margin:0; font-weight:@normal-weight; border-bottom:1px solid @light-gray;
+							a {color:@blue; padding:36px 15px; display:block; text-align:center;
+								&:hover {background:@blue; color:white; .border-radius(12px 12px 0 0);}
+								&:active {background:darken(@blue,10%);}
+							}
+						}
+						.event-info {background:@lighter-gray; .border-radius(0 0 12px 12px); padding:25px 15px; font-size:@meta-size;
+							.event-date, .event-time {text-transform:uppercase; display:block;}
+							.event-date {color:@gray;}
+							.event-time {color:@pink;}
+							.event-desc {
+								strong {text-transform:uppercase; color:@blue;}
+							}
+							.button {float:none; display:block; margin:0 auto; width:200px; text-align:center;}
+						}
+					}
+				}
+			}
+			
+			&.about {background:@blue;}
+			&.social-media {background:@gray;}
+			footer {}
+		}
+	}
+}

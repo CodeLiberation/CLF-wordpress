@@ -57,12 +57,16 @@ http://0to255.com/
 @alert-blue:        #d5edf8;
 
 @black:             #000;
+@gray:							#666666;
+@light-gray:				#E6E6E6;
+@lighter-gray:			#F2F2F2;
 @white:             #fff;
 
-@bones-pink:        #f01d4f;
-@bones-blue:        #1990db;
+@pink:     				  #ED408C;
+@blue:     				  #5BC8E4;
+@light-blue:				lighten(@blue,10%);
 
-@link-color:        @bones-pink;
+@link-color:        @pink;
 @link-hover:        darken(@link-color, 9%);
 
 /*
@@ -76,29 +80,95 @@ http://sachagreif.com/sass-color-variables/
 TYPOGRAPHY
 *********************/
 
-@sans-serif:         "Helvetica Neue", Helvetica, Arial, sans-serif; 
-@serif:              "Georgia", Cambria, Times New Roman, Times, serif; 
+@sans-serif:         "Bariol", Helvetica, Arial, sans-serif;
+@social-icon:         "SSSocial";
+@h1-size: 34px;
+@h2-size: 36px;
+@h3-size: 15px;
+@label-size: 24px;
+@p-size: 16px;
+@meta-size: 14px;
+@normal-weight: 400;
+@light-weight: 300;
+@bold-weight: bold;
 
+@font-face {
+    font-family: 'Bariol';
+    src: url('../fonts/bariol_regular.eot');
+    src: url('../fonts/bariol_regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bariol_regular.woff') format('woff'),
+         url('../fonts/bariol_regular.ttf') format('truetype');
+				 font-weight:@normal-weight;
+}
 
-/* 	To embed your own fonts, use this syntax
-	and place your fonts inside the 
-	library/fonts folder. For more information
-	on embedding fonts, go to:
-	http://www.fontsquirrel.com/
-	Be sure to remove the comment brackets.
+@font-face {
+    font-family: 'Bariol';
+    src: url('../fonts/bariol_light.eot');
+    src: url('../fonts/bariol_light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bariol_light.woff') format('woff'),
+         url('../fonts/bariol_light.ttf') format('truetype');
+		     font-weight:@light-weight;
+}
+
+@font-face {
+    font-family: 'Bariol';
+    src: url('../fonts/bariol_bold.eot');
+    src: url('../fonts/bariol_bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bariol_bold.woff') format('woff'),
+         url('../fonts/bariol_bold.ttf') format('truetype');
+		     font-weight:@bold-weight;
+}
+
+/*
+* Symbolset
+* www.symbolset.com
+* Copyright © 2012 Oak Studios LLC
+* 
+* Upload this file to your web server
+* and place this within your <head> tags.
+* <link href="webfonts/ss-social.css" rel="stylesheet" />
 */
 
-/*	@font-face {
-    	font-family: 'Font Name';
-    	src: url('../fonts/font-name.eot');
-    	src: url('../fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('../fonts/font-name.woff') format('woff'),
-             url('../fonts/font-name.ttf') format('truetype'),
-             url('../fonts/font-name.svg#font-name') format('svg');
-    	font-weight: normal;
-    	font-style: normal;
-	}
-*/
+@font-face {
+  font-family: "SSSocial";
+  src: url('../fonts/ss-social-circle.eot');
+  src: url('../fonts/ss-social-circle.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/ss-social-circle.woff') format('woff'),
+       url('../fonts/ss-social-circle.ttf') format('truetype'),
+       url('../fonts/ss-social-circle.svg#SSSocialCircle') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.ss-icon, .ss-icon.ss-social, .ss-icon.ss-social-circle,
+[class^="ss-"]:before, [class*=" ss-"]:before, 
+[class^="ss-"][class*=" ss-social"]:before, [class*=" ss-"][class*=" ss-social"]:before,
+[class^="ss-"].right:after, [class*=" ss-"].right:after,
+[class^="ss-"][class*=" ss-social"].right:after, [class*=" ss-"][class*=" ss-social"].right:after{
+  font-family: "SSSocial";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+.ss-icon.ss-social-circle, 
+[class^="ss-"].ss-social-circle:before, [class*=" ss-"].ss-social-circle:before,
+[class^="ss-"].ss-social-circle.right:after, [class*=" ss-"].ss-social-circle.right:after{
+  font-weight: bold;
+}
+
+[class^="ss-"].right:before, [class^="ss-"][class*=" ss-social"].right:before{display:none;content:'';}
+
+.ss-facebook:before,.ss-facebook.right:after{content:''}.ss-twitter:before,.ss-twitter.right:after{content:''}.ss-linkedin:before,.ss-linkedin.right:after{content:''}.ss-googleplus:before,.ss-googleplus.right:after{content:''}.ss-tumblr:before,.ss-tumblr.right:after{content:''}.ss-wordpress:before,.ss-wordpress.right:after{content:''}.ss-blogger:before,.ss-blogger.right:after{content:''}.ss-posterous:before,.ss-posterous.right:after{content:''}.ss-youtube:before,.ss-youtube.right:after{content:''}.ss-vimeo:before,.ss-vimeo.right:after{content:''}.ss-flickr:before,.ss-flickr.right:after{content:''}.ss-instagram:before,.ss-instagram.right:after{content:''}.ss-pinterest:before,.ss-pinterest.right:after{content:''}.ss-dribbble:before,.ss-dribbble.right:after{content:''}.ss-behance:before,.ss-behance.right:after{content:''}.ss-github:before,.ss-github.right:after{content:''}.ss-octocat:before,.ss-octocat.right:after{content:''}.ss-paypal:before,.ss-paypal.right:after{content:''}.ss-foursquare:before,.ss-foursquare.right:after{content:''}.ss-skype:before,.ss-skype.right:after{content:''}.ss-rdio:before,.ss-rdio.right:after{content:''}.ss-spotify:before,.ss-spotify.right:after{content:''}.ss-lastfm:before,.ss-lastfm.right:after{content:''}.ss-mail:before,.ss-mail.right:after{content:'✉'}.ss-like:before,.ss-like.right:after{content:'👍'}.ss-rss:before,.ss-rss.right:after{content:''}
 
 /* 
 use the best ampersand 
@@ -114,6 +184,9 @@ span.amp {
 .text-center { text-align: center; }
 .text-right  { text-align: right; }
 
+/* positions */
+.fixed {position:fixed;}
+.fixed-bottom {bottom:0; left:0; right:0;}
 
 // alerts and notices
 .alert {
@@ -157,10 +230,16 @@ don't use the shorthand to define *different* corners.
 USAGE: .border-radius(4px); 
 
 */
-.border-radius(@radius: 4px) {
+.border-radius(@radius: 12px) {
   -webkit-border-radius: @radius;
      -moz-border-radius: @radius;
           border-radius: @radius;
+}
+
+.box-sizing(@boxsizing: border-box) {
+  -webkit-box-sizing: @boxsizing;
+     -moz-box-sizing: @boxsizing;
+          box-sizing: @boxsizing;
 }
 
 
@@ -215,48 +294,45 @@ BUTTONS
 *********************/
 
 .button, .button:visited {
-	border: 1px solid darken(@bones-pink, 13%);
-	border-top-color: darken(@bones-pink, 7%);
-	border-left-color: darken(@bones-pink, 7%);
-	padding: 4px 12px;
+	background:@blue;
+	border:0;
+	padding: 15px 30px;
 	color: @white;
 	display: inline-block;
-	font-size: 11px;
-	font-weight: bold;
+	font-size: @label-size;
+	font-family:@sans-serif;
+	font-weight:@normal-weight;
 	text-decoration: none;
-	text-shadow: 0 1px rgba(0,0,0, .75);
+	text-transform:lowercase;
 	cursor: pointer;
-	margin-bottom: 20px;
+	margin-top: 12px;
 	line-height: 21px;
 	.transition();
-	.border-radius(4px);
-	.css-gradient(@bones-pink,darken(@bones-pink, 5%));
+	.border-radius;
+	float:right;
 
 	&:hover, &:focus {
 		color: @white;
-	  border: 1px solid darken(@bones-pink, 13%);
-	  border-top-color: darken(@bones-pink, 20%);
-	 	border-left-color: darken(@bones-pink, 20%);
-		.css-gradient(darken(@bones-pink, 5%),darken(@bones-pink, 10%));
+		background:lighten(@blue,10%);
 	}
 	
 	&:active {
-		.css-gradient(darken(@bones-pink, 5%),@bones-pink);
+		background:darken(@blue,10%);
 	}	
 }
 
 .blue-button, .blue-button:visited {
-	border-color: darken(@bones-blue, 10%);
-	text-shadow: 0 1px 1px darken(@bones-blue, 10%);
-	.css-gradient( @bones-blue, darken(@bones-blue, 5%) );
-	-webkit-box-shadow: inset 0 0 3px lighten(@bones-blue, 16%);
-       -moz-box-shadow: inset 0 0 3px lighten(@bones-blue, 16%);
-   	        box-shadow: inset 0 0 3px lighten(@bones-blue, 16%);
+	border-color: darken(@blue, 10%);
+	text-shadow: 0 1px 1px darken(@blue, 10%);
+	.css-gradient( @blue, darken(@blue, 5%) );
+	-webkit-box-shadow: inset 0 0 3px lighten(@blue, 16%);
+       -moz-box-shadow: inset 0 0 3px lighten(@blue, 16%);
+   	        box-shadow: inset 0 0 3px lighten(@blue, 16%);
 	&:hover, &:focus {
-		border-color: darken(@bones-blue, 15%);
-		.css-gradient( darken(@bones-blue, 4%), darken(@bones-blue, 10%) );
+		border-color: darken(@blue, 15%);
+		.css-gradient( darken(@blue, 4%), darken(@blue, 10%) );
 	}
 	&:active {
-		.css-gradient( darken(@bones-blue, 5%), @bones-blue );
+		.css-gradient( darken(@blue, 5%), @blue );
 	}
 }

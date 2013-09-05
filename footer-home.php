@@ -1,4 +1,4 @@
-			<footer class="footer fixed fixed-bottom" role="contentinfo">
+			<footer class="footer" role="contentinfo">
 
 				<div id="inner-footer" class="wrap clearfix">
 					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
