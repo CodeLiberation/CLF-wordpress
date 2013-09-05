@@ -1,3 +1,6 @@
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
 /******************************************************************
 Site Name:
 Author:
@@ -834,6 +837,30 @@ body {
   width: 96%;
   margin: 0 auto;
 }
+#about-container .nav {
+  background: transparent;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+#about-container .nav a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 10px;
+  background-color: transparent;
+  border-bottom: 0px;
+  /*
+			remember this is for mobile ONLY, so there's no need
+			to even declare hover styles here, you can do it in
+			the style.scss file where it's relevant. We want to
+			keep this file as small as possible!
+			*/
+
+}
+#about-container .nav li a {
+  background-color: transparent;
+}
 /*********************
 04. LINK STYLES
 *********************/
@@ -929,8 +956,12 @@ h5,
 /*********************
 06. HEADER STYLES
 *********************/
-.header #logo {
-  font-size: 0;
+.header #about-inner-header img {
+  padding-top: 10px;
+  display: block;
+  border: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*********************
 07. NAVIGATION STYLES
@@ -986,6 +1017,18 @@ and more scalable.
 *********************/
 #content {
   margin-top: 2.2em;
+}
+#content #about-content-top {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 570px;
+  font-size: 26px;
+  color: grey;
+  font-family: "century gothic";
+  padding-bottom: 20px;
+  border-bottom: 1px solid #33ccff;
+  text-align: justify;
 }
 /* end .hentry */
 /* want to style individual post classes? Booya! */
