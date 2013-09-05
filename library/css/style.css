@@ -932,7 +932,7 @@ body {
 }
 body {
   font-family: "Bariol", Helvetica, Arial, sans-serif;
-  font-size: 100%;
+  font-size: 16px;
   line-height: 1.5;
   color: #000000;
 }
@@ -1644,6 +1644,15 @@ textarea:focus {
 .home #content .entry-content.events-classes .events-classes-list {
   margin: 0;
   padding: 0;
+  zoom: 1;
+}
+.home #content .entry-content.events-classes .events-classes-list:before,
+.home #content .entry-content.events-classes .events-classes-list:after {
+  content: "";
+  display: table;
+}
+.home #content .entry-content.events-classes .events-classes-list:after {
+  clear: both;
 }
 .home #content .entry-content.events-classes .events-classes-list li {
   background: #ffffff;
@@ -1652,10 +1661,52 @@ textarea:focus {
   border-radius: 12px;
   float: left;
   width: 31.3333%;
-  margin: 0 2% 0 0;
+  margin: 0 3% 0 0;
 }
 .home #content .entry-content.events-classes .events-classes-list li:last-child {
   margin: 0;
+}
+.home #content .entry-content.events-classes .events-classes-list li h3 {
+  font-size: 36px;
+  line-height: 36px;
+  margin: 0;
+  font-weight: 400;
+  border-bottom: 1px solid #e6e6e6;
+}
+.home #content .entry-content.events-classes .events-classes-list li h3 a {
+  padding: 36px 15px;
+  display: block;
+  text-align: center;
+}
+.home #content .entry-content.events-classes .events-classes-list li .event-info {
+  background: #f2f2f2;
+  -webkit-border-radius: 0 0 12px 12px;
+  -moz-border-radius: 0 0 12px 12px;
+  border-radius: 0 0 12px 12px;
+  padding: 25px 15px;
+  font-size: 14px;
+}
+.home #content .entry-content.events-classes .events-classes-list li .event-info .event-date,
+.home #content .entry-content.events-classes .events-classes-list li .event-info .event-time {
+  text-transform: uppercase;
+  display: block;
+}
+.home #content .entry-content.events-classes .events-classes-list li .event-info .event-date {
+  color: #666666;
+}
+.home #content .entry-content.events-classes .events-classes-list li .event-info .event-time {
+  color: #ed408c;
+}
+.home #content .entry-content.events-classes .events-classes-list li .event-info .event-desc strong {
+  text-transform: uppercase;
+  color: #5bc8e4;
+}
+.home #content .entry-content.events-classes .events-classes-list li .event-info .button {
+  float: none;
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  text-align: center;
 }
 .home #content .entry-content.about {
   background: #5bc8e4;

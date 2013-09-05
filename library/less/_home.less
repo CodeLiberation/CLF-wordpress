@@ -19,15 +19,28 @@
 				h2 {font-size:@h2-size; line-height:@h2-size; margin:0 0 30px; color:@white; font-weight:@normal-weight;}
 			}
 			&.events-classes {background:@pink;
-				.events-classes-list {margin:0; padding:0;
-					li {background:@white; .border-radius; float:left; width:31.3333%; margin:0 2% 0 0;
+				.events-classes-list {margin:0; padding:0; .clearfix;
+					li {background:@white; .border-radius; float:left; width:31.3333%; margin:0 3% 0 0;
 						&:last-child {margin:0;}
+						h3 {font-size:@h2-size; line-height:@h2-size; margin:0; font-weight:@normal-weight; border-bottom:1px solid @light-gray;
+							a {padding:36px 15px; display:block; text-align:center;}
+						}
+						.event-info {background:@lighter-gray; .border-radius(0 0 12px 12px); padding:25px 15px; font-size:@meta-size;
+							.event-date, .event-time {text-transform:uppercase; display:block;}
+							.event-date {color:@gray;}
+							.event-time {color:@pink;}
+							.event-desc {
+								strong {text-transform:uppercase; color:@blue;}
+							}
+							.button {float:none; display:block; margin:0 auto; width:200px; text-align:center;}
+						}
 					}
 				}
 			}
 			
 			&.about {background:@blue;}
 			&.social-media {background:@gray;}
+			footer {}
 		}
 	}
 }

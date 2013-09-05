@@ -36,21 +36,26 @@ Template Name: Home Page
 								 	}else{
   									 $recurring_format = get_option('time_format');
 								 	}
-									 
+								   $post_object = get_post($event->ID);
+								   $description = $post_object->post_content;
+									$event_category = get_the_category();
+									$btn_text = $event_category[0];
 						          printf(
 						             '<li>
 											<h3 class="event-title"><a href="%s">%s</a></h3>
 										 	<section class="event-info">
-											 	<span class="meta-date">%s - %s</span>
-												<span class="meta-time">%s</span>
+											 	<span class="event-date">%s - %s</span>
+												<span class="event-time">%s</span>
+												<p class="event-desc">'.$description.'</p>
+												<a class="button" href="%s">Join this '.$btn_text.'</a> 
 											</section>
 										 </li>',
 						             get_permalink($event->ID),
 						             get_the_title($event->ID),
 						             eo_get_the_start($dateformat, $event->ID,null,$event->occurrence_id),
 										 eo_get_the_end($dateformat, $event->ID,null,$event->occurrence_id),
-						             eo_get_the_start($recurring_format, $event->ID,null,$event->occurrence_id)
-										 
+						             eo_get_the_start($recurring_format, $event->ID,null,$event->occurrence_id),
+										 get_permalink($event->ID)
 						          );
 						     endforeach;
 						     echo '</ul>';
