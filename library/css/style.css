@@ -564,7 +564,7 @@ TYPOGRAPHY
   font-family: 'Bariol';
   src: url('../fonts/bariol_light.eot');
   src: url('../fonts/bariol_light.eot?#iefix') format('embedded-opentype'), url('../fonts/bariol_light.woff') format('woff'), url('../fonts/bariol_light.ttf') format('truetype');
-  font-weight: 300;
+  font-weight: 100;
 }
 @font-face {
   font-family: 'Bariol';
@@ -991,7 +991,7 @@ body {
 }
 .hero h1 {
   font-size: 34px;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
   color: #666666;
 }
@@ -1563,7 +1563,7 @@ textarea {
   font-size: 24px;
   padding: 15px;
   font-family: "Bariol", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   color: #666666;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
@@ -1601,7 +1601,7 @@ textarea:focus {
 .home .mailing-list .widgettitle {
   color: #666666;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 400;
   border-bottom: 0;
   margin: 0 0 20px;
 }
@@ -1631,6 +1631,10 @@ textarea:focus {
 .home #content .entry-content:after {
   clear: both;
 }
+.home #content .entry-content .article-header.index-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .home #content .entry-content .article-header.index-hero h2 {
   font-size: 36px;
   line-height: 36px;
@@ -1645,6 +1649,8 @@ textarea:focus {
   margin: 0;
   padding: 0;
   zoom: 1;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .home #content .entry-content.events-classes .events-classes-list:before,
 .home #content .entry-content.events-classes .events-classes-list:after {
@@ -1694,7 +1700,7 @@ textarea:focus {
   -webkit-border-radius: 0 0 12px 12px;
   -moz-border-radius: 0 0 12px 12px;
   border-radius: 0 0 12px 12px;
-  padding: 25px 15px;
+  padding: 25px 18px;
   font-size: 14px;
 }
 .home #content .entry-content.events-classes .events-classes-list li .event-info .event-date,
@@ -1719,11 +1725,106 @@ textarea:focus {
   width: 200px;
   text-align: center;
 }
+.home #content .entry-content.events-classes footer {
+  color: #b23069;
+}
+.home #content .entry-content.events-classes footer a {
+  color: #772046;
+  border-bottom-color: #b23069;
+}
 .home #content .entry-content.about {
   background: #5bc8e4;
 }
+.home #content .entry-content.about .area-content ul:first-child {
+  margin: 0;
+  float: left;
+  width: 16%;
+  margin: 0 1% 0 0;
+}
+.home #content .entry-content.about .area-content ul:first-child li {
+  max-height: 175px;
+  overflow: hidden;
+  margin: 0 0 12px;
+}
+.home #content .entry-content.about .area-content ul:first-child li a {
+  display: block;
+}
+.home #content .entry-content.about .area-content ul:first-child li a img {
+  display: block;
+}
+.home #content .entry-content.about .area-content ul:first-child li:last-child {
+  margin-bottom: 0;
+}
+.home #content .entry-content.about .area-content > p {
+  color: #4496ab;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 15px;
+  margin: 0 0 12px;
+}
+.home #content .entry-content.about .area-content > p + ul {
+  zoom: 1;
+  margin: 0;
+  width: 83%;
+  float: left;
+}
+.home #content .entry-content.about .area-content > p + ul:before,
+.home #content .entry-content.about .area-content > p + ul:after {
+  content: "";
+  display: table;
+}
+.home #content .entry-content.about .area-content > p + ul:after {
+  clear: both;
+}
+.home #content .entry-content.about .area-content > p + ul li {
+  min-height: 145px;
+  width: 24.25%;
+  margin: 0 1% 25px 0;
+  float: left;
+  padding: 12px;
+  background: #bde9f4;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.home #content .entry-content.about .area-content > p + ul li blockquote {
+  margin: 0;
+  color: #666666;
+  display: table-cell;
+  vertical-align: middle;
+}
+.home #content .entry-content.about .area-content > p + ul li:nth-child(4n) {
+  margin-right: 0;
+}
+.home #content .entry-content.about footer {
+  color: #4496ab;
+}
+.home #content .entry-content.about footer a {
+  color: #2e6472;
+  border-bottom-color: #4496ab;
+}
 .home #content .entry-content.social-media {
   background: #666666;
+}
+.home #content .entry-content .entry-content .article-header.index-hero,
+.home #content .entry-content .area-content,
+.home #content .entry-content footer {
+  max-width: 1200px;
+  margin: 30px auto 0;
+}
+.home #content .entry-content footer {
+  font-size: 24px;
+}
+.home #content .entry-content footer a {
+  text-transform: lowercase;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+.home #content .entry-content footer .fine-print {
+  float: right;
 }
 /*
 SMALLER MOBILE DEVICES

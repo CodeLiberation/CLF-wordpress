@@ -70,6 +70,9 @@ Template Name: Home Page
 						<header class="article-header index-hero">
 							<h2><?php the_field('about_our_classes_header_text'); ?></h2>
 						</header> <!-- end article header -->
+						<article class="area-content">
+							<?php the_field('about_our_classes_content'); ?>
+						</article>
 						<footer>
 							<a href="#"><?php the_field('about_our_teachers_link'); ?></a>
 							<span class="fine-print"><?php the_field('about_our_classes_fine_print'); ?></span>
