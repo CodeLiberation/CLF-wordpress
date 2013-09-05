@@ -80,6 +80,7 @@ http://sachagreif.com/sass-color-variables/
 /*********************
 TYPOGRAPHY
 *********************/
+
 /* 	To embed your own fonts, use this syntax
 	and place your fonts inside the 
 	library/fonts folder. For more information
@@ -98,6 +99,7 @@ TYPOGRAPHY
     	font-style: normal;
 	}
 */
+
 /* 
 use the best ampersand 
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
@@ -116,6 +118,7 @@ span.amp {
 .text-right {
   text-align: right;
 }
+
 .alert {
   margin: 10px;
   padding: 5px 18px;
@@ -185,18 +188,20 @@ BUTTONS
   padding: 4px 12px;
   color: #ffffff;
   display: inline-block;
-  font-size: 11px;
-  font-weight: bold;
+  font-size: 24px;
+  font-family: "Bariol", Helvetica, Arial, sans-serif;
+  font-weight: 400;
   text-decoration: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+  text-transform: lowercase;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-top: 12px;
   line-height: 21px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+<<<<<<< HEAD
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -347,6 +352,9 @@ FOOTER STYLES
 check your menus here. do they look good?
 do they need tweaking?
 */
+.footer nav ul.nav {
+  border: 0;
+}
 /* end .footer-links */
 /* import grid */
 /******************************************************************
@@ -465,6 +473,10 @@ LAYOUT & GRID STYLES
 /*********************
 HEADER STYLES
 *********************/
+.hero {
+  margin: 0 auto 55px;
+  padding: 0 0 55px;
+}
 /*********************
 NAVIGATION STYLES
 *********************/

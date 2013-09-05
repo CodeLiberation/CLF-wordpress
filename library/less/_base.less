@@ -38,10 +38,10 @@ html, body {
 	/* height: 100%; */
 }
 body {
-	font-family: @serif;
-	font-size: 100%;
+	font-family: @sans-serif;
+	font-size: @p-size;
 	line-height: 1.5;
-	color: #565656;
+	color: @black;
 }
 
 /********************
@@ -93,7 +93,12 @@ body {
 	width: 96%;
 	margin: 0 auto;
 }
-#container {}
+.hero {width:90%; max-width:650px; border-bottom:1px dashed @blue; margin:0 auto 35px; padding:0 0 35px;
+	h1 {font-size:@h1-size; font-weight:@light-weight; margin:0; color:@gray;
+		strong.logotype {.transition(none); font-size:0; display:inline-block; width:489px; height:70px; background:url("../images/logotype.png") no-repeat; vertical-align:bottom; margin-right:10px; margin-bottom:8px;}
+	}
+}
+#container {padding-bottom:100px;}
 
 /*********************
 04. LINK STYLES
@@ -130,7 +135,7 @@ a, a:visited {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	font-family: @sans-serif;
 	text-rendering: optimizelegibility;
-	font-weight: 400;
+	font-weight: 300;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -176,7 +181,9 @@ h5, .h5 {
 .header {
 	#inner-header {}
 
-	#logo {font-size:0;}
+	#logo {margin:75px 0 25px;
+		a {font-size:0; background:url(../images/logo.png) no-repeat; width:206px; height:152px; display:block; margin:0 auto;}
+	}
 
 	nav {
 		ul.nav {
@@ -280,7 +287,6 @@ and more scalable.
 *********************/
 
 #content {
-	margin-top: 2.2em;
 
 	#inner-content {}
 }
@@ -849,14 +855,15 @@ and more scalable.
 13. FOOTER STYLES
 *********************/
 
-.footer {
+.footer {.text-center; border-top:1px solid fade(@gray,15%); background:fade(@white,75%);
 	clear: both;
 	#inner-footer {
 	}
+	p {color:@gray; margin-bottom:0;}
 	nav {
-		ul.nav {
-			li {
-				a {}
+		ul.nav {background:none; margin:0;
+			li {float:none; display:inline-block;
+				a {font-family:@social-icon; .ss-icon; background:none; font-size:@label-size;}
 
 				&:first-child {}
 
