@@ -38,8 +38,8 @@ Template Name: Home Page
 								 	}
 								   $post_object = get_post($event->ID);
 								   $description = $post_object->post_content;
-									$event_category = get_the_category();
-									$btn_text = $event_category[0];
+									$event_category =  get_the_term_list( $event->ID, 'event-category', '', ', ','');
+									$btn_text = strip_tags($event_category);
 						          printf(
 						             '<li>
 											<h3 class="event-title"><a href="%s">%s</a></h3>
