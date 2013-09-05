@@ -21,13 +21,13 @@ Template Name: Home Page
 						</header> <!-- end article header -->
 						<?php
 						 $events = eo_get_events(array(
-						         'numberposts'=>5,
+						         'numberposts'=>3,
 						         'event_start_after'=>'today',
 						         'showpastevents'=>true,//Will be deprecated, but set it to true to play it safe.
 						    ));
 
 						  if($events):
-						     echo '<ul>';
+						     echo '<ul class="events-classes-list">';
 						     foreach ($events as $event):
 						          //Check if all day, set format accordingly
 						          $dateformat = ( get_option('date_format'));
@@ -71,7 +71,7 @@ Template Name: Home Page
 						</footer>
 					</section> <!-- end article section -->
 					
-					<section class="entry-content events-classes clearfix" itemprop="articleBody">
+					<section class="entry-content social-media clearfix" itemprop="articleBody">
 						<header class="article-header index-hero">
 							<h2><?php the_field('social_media_header_text'); ?></h2>
 						</header> <!-- end article header -->

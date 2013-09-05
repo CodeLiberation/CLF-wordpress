@@ -6,9 +6,28 @@
 	}
 	.mailing-list {border:0; padding:0;
 		.widget{padding:0; margin:0;}
-		.widgettitle {color:@gray; font-size:@label-size; font-weight:100; border-bottom:0; margin:0 0 20px;}
+		.widgettitle {color:@gray; font-size:@label-size; font-weight:@light-weight; border-bottom:0; margin:0 0 20px;}
 		label {display:none !important;}
 		.error {color:@pink; margin:0 0 10px;}
 	}
-	.content {}
+	#content {
+		#inner-content {margin:0;
+			&.wrap {max-width:100%; width:auto;}
+		}
+		.entry-content {padding:45px; .clearfix;
+			.article-header.index-hero {
+				h2 {font-size:@h2-size; line-height:@h2-size; margin:0 0 30px; color:@white; font-weight:@normal-weight;}
+			}
+			&.events-classes {background:@pink;
+				.events-classes-list {margin:0; padding:0;
+					li {background:@white; .border-radius; float:left; width:31.3333%; margin:0 2% 0 0;
+						&:last-child {margin:0;}
+					}
+				}
+			}
+			
+			&.about {background:@blue;}
+			&.social-media {background:@gray;}
+		}
+	}
 }

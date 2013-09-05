@@ -78,12 +78,13 @@ TYPOGRAPHY
   font-family: 'Bariol';
   src: url('../fonts/bariol_regular.eot');
   src: url('../fonts/bariol_regular.eot?#iefix') format('embedded-opentype'), url('../fonts/bariol_regular.woff') format('woff'), url('../fonts/bariol_regular.ttf') format('truetype');
+  font-weight: 400;
 }
 @font-face {
   font-family: 'Bariol';
   src: url('../fonts/bariol_light.eot');
   src: url('../fonts/bariol_light.eot?#iefix') format('embedded-opentype'), url('../fonts/bariol_light.woff') format('woff'), url('../fonts/bariol_light.ttf') format('truetype');
-  font-weight: 100;
+  font-weight: 300;
 }
 @font-face {
   font-family: 'Bariol';
@@ -345,7 +346,7 @@ BUTTONS
   display: inline-block;
   font-size: 24px;
   font-family: "Bariol", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   text-decoration: none;
   text-transform: lowercase;
   cursor: pointer;

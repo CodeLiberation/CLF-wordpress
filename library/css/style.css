@@ -558,12 +558,13 @@ TYPOGRAPHY
   font-family: 'Bariol';
   src: url('../fonts/bariol_regular.eot');
   src: url('../fonts/bariol_regular.eot?#iefix') format('embedded-opentype'), url('../fonts/bariol_regular.woff') format('woff'), url('../fonts/bariol_regular.ttf') format('truetype');
+  font-weight: 400;
 }
 @font-face {
   font-family: 'Bariol';
   src: url('../fonts/bariol_light.eot');
   src: url('../fonts/bariol_light.eot?#iefix') format('embedded-opentype'), url('../fonts/bariol_light.woff') format('woff'), url('../fonts/bariol_light.ttf') format('truetype');
-  font-weight: 100;
+  font-weight: 300;
 }
 @font-face {
   font-family: 'Bariol';
@@ -825,7 +826,7 @@ BUTTONS
   display: inline-block;
   font-size: 24px;
   font-family: "Bariol", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   text-decoration: none;
   text-transform: lowercase;
   cursor: pointer;
@@ -990,7 +991,7 @@ body {
 }
 .hero h1 {
   font-size: 34px;
-  font-weight: 100;
+  font-weight: 300;
   margin: 0;
   color: #666666;
 }
@@ -1056,7 +1057,7 @@ h5,
 .h5 {
   font-family: "Bariol", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  font-weight: 400;
+  font-weight: 300;
   /*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -1562,7 +1563,7 @@ textarea {
   font-size: 24px;
   padding: 15px;
   font-family: "Bariol", Helvetica, Arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   color: #666666;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
@@ -1600,7 +1601,7 @@ textarea:focus {
 .home .mailing-list .widgettitle {
   color: #666666;
   font-size: 24px;
-  font-weight: 100;
+  font-weight: 300;
   border-bottom: 0;
   margin: 0 0 20px;
 }
@@ -1610,6 +1611,57 @@ textarea:focus {
 .home .mailing-list .error {
   color: #ed408c;
   margin: 0 0 10px;
+}
+.home #content #inner-content {
+  margin: 0;
+}
+.home #content #inner-content.wrap {
+  max-width: 100%;
+  width: auto;
+}
+.home #content .entry-content {
+  padding: 45px;
+  zoom: 1;
+}
+.home #content .entry-content:before,
+.home #content .entry-content:after {
+  content: "";
+  display: table;
+}
+.home #content .entry-content:after {
+  clear: both;
+}
+.home #content .entry-content .article-header.index-hero h2 {
+  font-size: 36px;
+  line-height: 36px;
+  margin: 0 0 30px;
+  color: #ffffff;
+  font-weight: 400;
+}
+.home #content .entry-content.events-classes {
+  background: #ed408c;
+}
+.home #content .entry-content.events-classes .events-classes-list {
+  margin: 0;
+  padding: 0;
+}
+.home #content .entry-content.events-classes .events-classes-list li {
+  background: #ffffff;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  float: left;
+  width: 31.3333%;
+  margin: 0 2% 0 0;
+}
+.home #content .entry-content.events-classes .events-classes-list li:last-child {
+  margin: 0;
+}
+.home #content .entry-content.about {
+  background: #5bc8e4;
+}
+.home #content .entry-content.social-media {
+  background: #666666;
 }
 /*
 SMALLER MOBILE DEVICES
@@ -1629,7 +1681,7 @@ tweeners.
     height: auto;
     margin-bottom: 0;
     margin-right: 6px;
-    font-weight: normal;
+    font-weight: 400;
   }
   .footer nav ul.nav {
     border: 0;

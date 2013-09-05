@@ -86,6 +86,9 @@ TYPOGRAPHY
 @label-size: 24px;
 @p-size: 16px;
 @meta-size: 14px;
+@normal-weight: 400;
+@light-weight: 300;
+@bold-weight: bold;
 
 @font-face {
     font-family: 'Bariol';
@@ -93,7 +96,7 @@ TYPOGRAPHY
     src: url('../fonts/bariol_regular.eot?#iefix') format('embedded-opentype'),
          url('../fonts/bariol_regular.woff') format('woff'),
          url('../fonts/bariol_regular.ttf') format('truetype');
-
+				 font-weight:@normal-weight;
 }
 
 @font-face {
@@ -102,7 +105,7 @@ TYPOGRAPHY
     src: url('../fonts/bariol_light.eot?#iefix') format('embedded-opentype'),
          url('../fonts/bariol_light.woff') format('woff'),
          url('../fonts/bariol_light.ttf') format('truetype');
-		     font-weight: 100;
+		     font-weight:@light-weight;
 }
 
 @font-face {
@@ -111,7 +114,7 @@ TYPOGRAPHY
     src: url('../fonts/bariol_bold.eot?#iefix') format('embedded-opentype'),
          url('../fonts/bariol_bold.woff') format('woff'),
          url('../fonts/bariol_bold.ttf') format('truetype');
-		     font-weight: bold;
+		     font-weight:@bold-weight;
 }
 
 /*
@@ -296,7 +299,7 @@ BUTTONS
 	display: inline-block;
 	font-size: @label-size;
 	font-family:@sans-serif;
-	font-weight:normal;
+	font-weight:@normal-weight;
 	text-decoration: none;
 	text-transform:lowercase;
 	cursor: pointer;
