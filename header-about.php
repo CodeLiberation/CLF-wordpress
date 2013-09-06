@@ -37,6 +37,11 @@
 		<!-- drop Google Analytics Here -->
 		<!-- end analytics -->
 
+		<?php if( is_page('contact') ){ ?>
+		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/verif.js"></script>
+		<?php }?>
+
 	</head>
 
 	<body <?php body_class(); ?>>
