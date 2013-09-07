@@ -6,11 +6,11 @@ Template Name: Contact
 
 <?php
 if(isset($_POST['submitted'])) {
-    if(trim($_POST['contactFirstName']) === '') {
+    if(trim($_POST['contactName']) === '') {
         $nameError = 'Please enter your name.';
         $hasError = true;
     } else {
-        $name = trim($_POST['contactFirstName']);
+        $name = trim($_POST['contactName']);
     }
 
     if(trim($_POST['email']) === '')  {
@@ -34,13 +34,15 @@ if(isset($_POST['submitted'])) {
         }
     }
 
+    $subject = trim($_POST['subject']);
+
     if(!isset($hasError)) {
         $emailTo = get_option('tz_email');
         if (!isset($emailTo) || ($emailTo == '') ){
-            $emailTo = get_option('admin_email');
+            $emailTo = 'hello@codeliberation.org';
         }
-        $subject = '[PHP Snippets] From '.$name;
-        $body = "Name: $name \n\nEmail: $email \n\nComments: $comments";
+        $subject = 'Contact Form Submission: '.$subject;
+        $body = "Name: $name \n\nEmail: $email \n\n$subject \n\nComments: $comments";
         $headers = 'From: '.$name.' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
 
         wp_mail($emailTo, $subject, $body, $headers);
@@ -57,39 +59,44 @@ if(isset($_POST['submitted'])) {
      </div>
 
      <div id="contact-form">
-        <?php the_post() ?>
-        <div id="post-<?php the_ID() ?>" class="post">
-            <div class="entry-content">
-                <form action="<?php the_permalink(); ?>" id="contactForm" method="post">
-                    <ul>
-                        <li>
-                            <label for="contactFirstName">First Name:</label>
-                            <input type="text" name="contactFirstName" id="contactFirstName" value="" />
-                            <label for="contactLastName">Last Name:</label>
-                            <input type="text" name="contactLastName" id="contactLastName" value="" />
-                        </li>
-                        <li>
-                            <label for="email">Email</label>
-                            <input type="text" name="email" id="email" value=""/>
-                        </li>
-                        <li>
-                            <label for="subjectText">Subject:</label>
-                            <textarea name="subject" id="subjectText" rows="7" cols="75"></textarea>
-                        </li>
-                        <li>
-                            <label for="commentsText">Message:</label>
-                            <textarea name="comments" id="commentsText" rows="7" cols="75"></textarea>
-                        </li>
-                        <li>
-                            <button type="submit">Send us your message!</button>
-                        </li>
-                    </ul>
-                    <input type="hidden" name="submitted" id="submitted" value="true" />
-                </form>
-            </div><!-- .entry-content ->
-        </div><!-- .post-->
-    </div>
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+            <?php if(isset($emailSent) && $emailSent == true) { ?>
+                <div id="email-success">
+                    Thanks, your email was sent successfully.
+                </div>
+            <?php } else { ?>
+
+                <?php the_post() ?>
+                    <div class="entry-content">
+                        <form action="<?php the_permalink(); ?>" id="contactForm" method="post">
+                            <ul>
+                                <li>
+                                    <label for="contactName">Name:</label>
+                                    <input type="text" name="contactName" id="contactName" value="" />
+                                </li>
+                                <li>
+                                    <label for="email">Email</label>
+                                    <input type="text" name="email" id="email" value=""/>
+                                </li>
+                                <li>
+                                    <label for="subject">Subject</label>
+                                    <input type="text" name="subject" id="subject" value=""/>
+                                </li>
+                                <li>
+                                    <label for="commentsText">Message:</label>
+                                    <textarea name="comments" id="commentsText" rows="7" cols="55"></textarea>
+                                </li>
+                                <li>
+                                    <button type="submit">Send us your message!</button>
+                                </li>
+                            </ul>
+                            <input type="hidden" name="submitted" id="submitted" value="true" />
+                        </form>
+                    </div>
+            <?php } ?>
+        <?php endwhile; endif; ?>
+    </div><!-- #content -->
 </div>
 
 <?php get_footer(); ?>
