@@ -83,6 +83,9 @@ Template Name: Home Page
 						<header class="article-header index-hero">
 							<h2><?php the_field('social_media_header_text'); ?></h2>
 						</header> <!-- end article header -->
+						<article class="area-content">
+							<?php the_field('social_media_twitter_shortcode'); ?>
+						</article>
 						<footer>
 							<?php the_field('social_media_links'); ?>
 						</footer>
