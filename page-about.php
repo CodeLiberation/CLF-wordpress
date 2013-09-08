@@ -4,21 +4,13 @@ Template Name: About
 */
 ?>
 
-<?php get_header('about'); ?>
+<?php get_header(); ?>
 
 <div id="content">
-     <div id="about-content-top">
-        Code Liberation was founded by Phoenix Perry and four women from various backgrounds who want to change the female-to-male ratio in video game development.
-     </div>
-
-	<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-
-		<div class="post">
-			<div class="entry">
-				<?php the_content(); ?>
-			</div>
-		</div>
-
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<section class="hero">
+			<?php the_content(); ?>
+		</section>
 	<?php endwhile; endif; ?>
 
 	<?php
