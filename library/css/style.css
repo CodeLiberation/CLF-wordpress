@@ -1118,6 +1118,8 @@ h5,
   height: 152px;
   display: block;
   margin: 0 auto;
+  overflow: hidden;
+  text-indent: 1000px;
 }
 /*********************
 07. NAVIGATION STYLES
@@ -1515,7 +1517,7 @@ and more scalable.
 }
 .footer p {
   color: #666666;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 .footer nav ul.nav {
   background: none;
@@ -1702,6 +1704,7 @@ textarea:focus {
   border-radius: 0 0 12px 12px;
   padding: 25px 18px;
   font-size: 14px;
+  line-height: 16px;
 }
 .home #content .entry-content.events-classes .events-classes-list li .event-info .event-date,
 .home #content .entry-content.events-classes .events-classes-list li .event-info .event-time {
@@ -1713,6 +1716,9 @@ textarea:focus {
 }
 .home #content .entry-content.events-classes .events-classes-list li .event-info .event-time {
   color: #ed408c;
+}
+.home #content .entry-content.events-classes .events-classes-list li .event-info .event-desc {
+  margin-top: 10px;
 }
 .home #content .entry-content.events-classes .events-classes-list li .event-info .event-desc strong {
   text-transform: uppercase;
@@ -1732,8 +1738,25 @@ textarea:focus {
   color: #772046;
   border-bottom-color: #b23069;
 }
+.home #content .entry-content.events-classes footer a:hover {
+  color: #b23069;
+}
 .home #content .entry-content.about {
   background: #5bc8e4;
+}
+.home #content .entry-content.about .article-header .fine-print {
+  color: #bde9f4;
+}
+.home #content .entry-content.about .area-content {
+  zoom: 1;
+}
+.home #content .entry-content.about .area-content:before,
+.home #content .entry-content.about .area-content:after {
+  content: "";
+  display: table;
+}
+.home #content .entry-content.about .area-content:after {
+  clear: both;
 }
 .home #content .entry-content.about .area-content ul:first-child {
   margin: 0;
@@ -1742,12 +1765,13 @@ textarea:focus {
   margin: 0 1% 0 0;
 }
 .home #content .entry-content.about .area-content ul:first-child li {
-  max-height: 175px;
-  overflow: hidden;
   margin: 0 0 12px;
 }
 .home #content .entry-content.about .area-content ul:first-child li a {
   display: block;
+  border: 7px solid #ffffff;
+  max-height: 175px;
+  overflow: hidden;
 }
 .home #content .entry-content.about .area-content ul:first-child li a img {
   display: block;
@@ -1777,34 +1801,59 @@ textarea:focus {
   clear: both;
 }
 .home #content .entry-content.about .area-content > p + ul li {
-  min-height: 145px;
+  height: 145px;
   width: 24.25%;
   margin: 0 1% 25px 0;
   float: left;
-  padding: 12px;
-  background: #bde9f4;
+  background: #def4fa;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   border-radius: 12px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  position: relative;
 }
 .home #content .entry-content.about .area-content > p + ul li blockquote {
   margin: 0;
   color: #666666;
+  position: absolute;
+  display: table;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 12px;
+}
+.home #content .entry-content.about .area-content > p + ul li blockquote p {
   display: table-cell;
   vertical-align: middle;
 }
 .home #content .entry-content.about .area-content > p + ul li:nth-child(4n) {
   margin-right: 0;
 }
+.home #content .entry-content.about .area-content > p + ul li:after {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(222, 244, 250, 0);
+  border-top-color: #def4fa;
+  border-width: 12px;
+  left: 35px;
+}
 .home #content .entry-content.about footer {
-  color: #4496ab;
+  color: #bde9f4;
 }
 .home #content .entry-content.about footer a {
   color: #2e6472;
   border-bottom-color: #4496ab;
+}
+.home #content .entry-content.about footer a:hover {
+  color: #4496ab;
 }
 .home #content .entry-content.social-media {
   background: #666666;
@@ -1817,6 +1866,7 @@ textarea:focus {
 }
 .home #content .entry-content footer {
   font-size: 24px;
+  line-height: 24px;
 }
 .home #content .entry-content footer a {
   text-transform: lowercase;
