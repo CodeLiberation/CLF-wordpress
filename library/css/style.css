@@ -3188,8 +3188,8 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 .nav {
-  border: 1px solid #ccc;
-  border-bottom: 0;
+  border: 0;
+  text-align: center;
   /* end .menu li */
 
   /* highlight current page */
@@ -3198,6 +3198,7 @@ and more scalable.
 
 }
 .nav li {
+  display: inline-block;
   /*
 		so you really have to rethink your dropdowns for mobile.
 		you don't want to have it expand too much because the
@@ -3208,11 +3209,12 @@ and more scalable.
 
 }
 .nav li a {
+  text-transform: lowercase;
   display: block;
   text-decoration: none;
   padding: 10px 10px;
-  background-color: #eee;
-  border-bottom: 1px solid #ccc;
+  color: #ed408c;
+  border-bottom: 1px solid #f48cba;
   /*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -3220,6 +3222,11 @@ and more scalable.
 			keep this file as small as possible!
 			*/
 
+}
+.nav li.current_page_item a {
+  font-weight: bold;
+  color: #666666;
+  border: 0;
 }
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
@@ -4037,6 +4044,82 @@ and more scalable.
 .home #content .entry-content footer .fine-print {
   float: right;
 }
+.page-template-page-about-php .about-us {
+  width: 90%;
+  max-width: 650px;
+  border-bottom: 1px dashed #5bc8e4;
+  margin: 0 auto 35px;
+  padding: 0 0 35px;
+  border: 0;
+}
+.page-template-page-about-php .about-us h1 {
+  font-size: 34px;
+  font-weight: 400;
+  margin: 0;
+  color: #666666;
+}
+.page-template-page-about-php .about-us h1 strong.logotype {
+  -webkit-transition: none 0.2s ease-in-out;
+  -moz-transition: none 0.2s ease-in-out;
+  -ms-transition: none 0.2s ease-in-out;
+  -o-transition: none 0.2s ease-in-out;
+  transition: none 0.2s ease-in-out;
+  font-size: 0;
+  display: inline-block;
+  width: 489px;
+  height: 70px;
+  background: url("../images/logotype.png") no-repeat;
+  vertical-align: bottom;
+  margin-right: 10px;
+  margin-bottom: 8px;
+}
+.page-template-page-about-php .about-us .codelib-admins {
+  margin: 0;
+  padding: 0;
+}
+.page-template-page-about-php .about-us .codelib-admins .admin-user {
+  list-style: none;
+  zoom: 1;
+  margin: 0 0 25px;
+}
+.page-template-page-about-php .about-us .codelib-admins .admin-user:before,
+.page-template-page-about-php .about-us .codelib-admins .admin-user:after {
+  content: "";
+  display: table;
+}
+.page-template-page-about-php .about-us .codelib-admins .admin-user:after {
+  clear: both;
+}
+.page-template-page-about-php .about-us .codelib-admins .admin-user .user-avatar {
+  display: block;
+  float: left;
+  width: 25%;
+  padding: 0 25px 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.page-template-page-about-php .about-us .codelib-admins .admin-user .user-avatar img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.page-template-page-about-php .about-us .codelib-admins .admin-user .user-info {
+  float: left;
+  width: 75%;
+}
+.page-template-page-about-php .about-us .codelib-admins .admin-user .user-name {
+  font-weight: bold;
+  margin: 0 0 25px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.page-template-page-about-php .about-us .codelib-admins .admin-user .user-name a {
+  color: #5bc8e4;
+}
+.page-template-page-about-php .about-us .codelib-admins .admin-user .user-name a.twitter {
+  color: #ed408c;
+  font-size: 15px;
+}
 /*
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -4261,8 +4344,8 @@ you can add resource intensive styles.
   NAVIGATION STYLES
   *********************/
   .nav {
-    background: #eee;
     border: 0;
+    margin: 40px 0 40px;
     /* end .menu ul li */
   
     /* highlight current page */
@@ -4271,8 +4354,7 @@ you can add resource intensive styles.
   
   }
   .nav li {
-    float: left;
-    position: relative;
+    display: inline-block;
     /*
   		plan your menus and drop-downs wisely.
   		*/
@@ -4281,16 +4363,29 @@ you can add resource intensive styles.
   
   }
   .nav li a {
-    border-bottom: 0;
-    /*
-  			you can use hover styles here even though this size
-  			has the possibility of being a mobile device.
-  			*/
-  
+    display: inline-block;
+    text-decoration: none;
+    color: #ed408c;
+    border-bottom: 1px solid #f48cba;
+    padding: 0;
   }
   .nav li a:hover,
   .nav li a:focus {
-    background-color: #dedede;
+    color: #f48cba;
+  }
+  .nav li.current_page_item a {
+    font-weight: bold;
+    color: #666666;
+    border: 0;
+  }
+  .nav li:after {
+    content: "-";
+    color: #adadad;
+    display: inline-block;
+    margin: 0 2px 0 5px;
+  }
+  .nav li:last-child:after {
+    content: "";
   }
   .nav li ul.sub-menu,
   .nav li ul.children {

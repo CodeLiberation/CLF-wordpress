@@ -12,7 +12,8 @@ Template Name: About
 			<?php the_content(); ?>
 		</section>
 	<?php endwhile; endif; ?>
-
+	<div class="about-us">
+		<ul class="codelib-admins">
 	<?php
 
 	// Get the authors from the database ordered by user nicename
@@ -35,32 +36,28 @@ Template Name: About
 			// Set default avatar (values = default, wavatar, identicon, monsterid)
 				$avatar = 'wavatar';
 	?>
-
-	<div id="about-us">
-
-		<a href="<?php echo $user_link; ?>" title="<?php echo $curauth->display_name; ?>">
+	<li class="admin-user">
+		<a href="<?php echo $user_link; ?>" title="<?php echo $curauth->display_name; ?>" class="user-avatar">
 			<?php echo get_avatar($curauth->user_email, '200', $avatar); ?>
 		</a>
 
-		<div id="about-us-title">
-		<a href="<?php echo $user_link; ?>" title="<?php echo $curauth->display_name; ?>"><?php echo $curauth->display_name; ?></a>
+		<section class="user-info">
+			<h2 class="user-name">
+			<a href="<?php echo $user_link; ?>" title="<?php echo $curauth->display_name; ?>"><?php echo $curauth->display_name; ?></a>
 		
-		<?php if($user->twitter) : ?>
-					<a href="http://twitter.com/<?php echo $user->twitter; ?>" title="Visit <?php echo $user->display_name; ?>'s Twitter account" class="twitter">
-					    @<?php echo $user->twitter; ?>
-					</a>
-		<?php endif; ?>
-		</div>
-
-		<p>
+			<?php if(get_the_author_meta('twitter')) : ?>
+						<a href="http://twitter.com/<?php echo get_the_author_meta('twitter'); ?>" title="Visit <?php echo $user->display_name; ?>'s Twitter account" class="twitter">
+						    @<?php echo get_the_author_meta('twitter'); ?>
+						</a>
+			<?php endif; ?>
+			</h2>
 			<?php echo $curauth->description; ?>
-		</p>
-
-	</div>
-
+		</section>
+	</li>
 		<?php endif; ?>
 
 	<?php endforeach; ?>
+</ul>
 </div>
 
 <?php get_footer(); ?>

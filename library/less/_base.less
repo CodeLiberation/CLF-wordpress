@@ -210,18 +210,16 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 
-.nav {
-	border: 1px solid #ccc;
-	border-bottom: 0;
+.nav {border:0; text-align:center;
 
-	li {
+	li {display:inline-block;
 
-		a {
+		a {text-transform:lowercase;
 			display: block;
 			text-decoration: none;
 			padding: 10px 10px;
-			background-color: #eee;
-			border-bottom: 1px solid #ccc;
+			color:@pink;
+			border-bottom: 1px solid @light-pink;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -233,7 +231,9 @@ and more scalable.
 
 			}
 		}
-
+		&.current_page_item {
+			a {font-weight:@bold-weight; color:@gray; border:0;}
+		}
 		&:first-child {}
 
 		&:last-child {}

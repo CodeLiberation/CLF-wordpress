@@ -2674,8 +2674,8 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 .nav {
-  background: #eee;
   border: 0;
+  margin: 40px 0 40px;
   /* end .menu ul li */
 
   /* highlight current page */
@@ -2684,8 +2684,7 @@ NAVIGATION STYLES
 
 }
 .nav li {
-  float: left;
-  position: relative;
+  display: inline-block;
   /*
 		plan your menus and drop-downs wisely.
 		*/
@@ -2694,16 +2693,29 @@ NAVIGATION STYLES
 
 }
 .nav li a {
-  border-bottom: 0;
-  /*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
-			*/
-
+  display: inline-block;
+  text-decoration: none;
+  color: #ed408c;
+  border-bottom: 1px solid #f48cba;
+  padding: 0;
 }
 .nav li a:hover,
 .nav li a:focus {
-  background-color: #dedede;
+  color: #f48cba;
+}
+.nav li.current_page_item a {
+  font-weight: bold;
+  color: #666666;
+  border: 0;
+}
+.nav li:after {
+  content: "-";
+  color: #adadad;
+  display: inline-block;
+  margin: 0 2px 0 5px;
+}
+.nav li:last-child:after {
+  content: "";
 }
 .nav li ul.sub-menu,
 .nav li ul.children {
