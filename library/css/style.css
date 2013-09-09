@@ -3066,9 +3066,6 @@ body {
   margin-right: 10px;
   margin-bottom: 8px;
 }
-#container {
-  padding-bottom: 100px;
-}
 /*********************
 04. LINK STYLES
 *********************/
@@ -3177,9 +3174,20 @@ h5,
   overflow: hidden;
   text-indent: 1000px;
 }
+.header nav ul.nav li {
+  margin: 0 15px 0 0;
+}
 .header nav ul.nav li a {
   border-bottom: 1px solid #f48cba;
-  padding: 10px 10px;
+  padding: 10px 5px;
+}
+.header nav ul.nav li.current_page_item a {
+  font-weight: bold;
+  color: #666666;
+  border: 0;
+}
+.header nav ul.nav li:last-child {
+  margin: 0;
 }
 /*********************
 07. NAVIGATION STYLES
@@ -3577,15 +3585,16 @@ and more scalable.
 }
 .footer p {
   color: #666666;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .footer nav ul.nav {
   background: none;
-  margin: 0;
+  margin: 0 0 5px;
 }
 .footer nav ul.nav li {
   float: none;
   display: inline-block;
+  margin: 0 10px 0 0;
 }
 .footer nav ul.nav li a {
   font-family: "SSSocial";
@@ -3603,6 +3612,13 @@ and more scalable.
   -webkit-font-smoothing: antialiased;
   background: none;
   font-size: 24px;
+  color: #5bc8e4;
+}
+.footer nav ul.nav li:last-child {
+  margin-right: 0;
+}
+.footer .paypal-button {
+  margin-bottom: 15px;
 }
 /*
 	if you checked out the link above:
@@ -3614,6 +3630,38 @@ and more scalable.
 	view.
 	*/
 /* end .footer-links */
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=phone],
+input[type=url],
+textarea {
+  background: #e6e6e6;
+  border: 0;
+  font-size: 24px;
+  padding: 15px;
+  font-family: "Bariol", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #666666;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+input[type=phone]:focus,
+input[type=url]:focus,
+textarea:focus {
+  outline: none;
+  color: #000000;
+  background: #ececec;
+}
 .home #container {
   padding: 0;
 }
@@ -4048,6 +4096,8 @@ and more scalable.
   margin: 0 auto 35px;
   padding: 0 0 35px;
   border: 0;
+  padding: 0;
+  margin-bottom: 55px;
 }
 .page-template-page-about-php .about-us h1 {
   font-size: 34px;
@@ -4107,7 +4157,7 @@ and more scalable.
 }
 .page-template-page-about-php .about-us .codelib-admins .admin-user .user-name {
   font-weight: bold;
-  margin: 0 0 25px;
+  margin: 0 0 15px;
   border-bottom: 1px solid #e6e6e6;
   color: #5bc8e4;
 }
@@ -4332,16 +4382,45 @@ you can add resource intensive styles.
   /*********************
   HEADER STYLES
   *********************/
-  .hero {
+  .header {
+    /*********************
+  NAVIGATION STYLES
+  *********************/
+  
+  }
+  .header nav ul.nav {
+    border: 0;
+    margin: 40px 0 40px;
+  }
+  .header nav ul.nav li {
+    display: inline-block;
+    margin: 0;
+  }
+  .header nav ul.nav li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ed408c;
+    border-bottom: 1px solid #f48cba;
+    padding: 0;
+  }
+  .header nav ul.nav li a:hover,
+  .header nav ul.nav li a:focus {
+    color: #f48cba;
+  }
+  .header nav ul.nav li:after {
+    content: "-";
+    color: #adadad;
+    display: inline-block;
+    margin: 0 2px 0 5px;
+  }
+  .header nav ul.nav li:last-child:after {
+    content: "";
+  }
+  .header .hero {
     margin: 0 auto 55px;
     padding: 0 0 55px;
   }
-  /*********************
-  NAVIGATION STYLES
-  *********************/
-  .inner-header .nav {
-    border: 0;
-    margin: 40px 0 40px;
+  .header .inner-header {
     /* end .menu ul li */
   
     /* highlight current page */
@@ -4349,8 +4428,7 @@ you can add resource intensive styles.
     /* end current highlighters */
   
   }
-  .inner-header .nav li {
-    display: inline-block;
+  .header .inner-header .nav {
     /*
   		plan your menus and drop-downs wisely.
   		*/
@@ -4358,33 +4436,8 @@ you can add resource intensive styles.
     /* showing sub-menus */
   
   }
-  .inner-header .nav li a {
-    display: inline-block;
-    text-decoration: none;
-    color: #ed408c;
-    border-bottom: 1px solid #f48cba;
-    padding: 0;
-  }
-  .inner-header .nav li a:hover,
-  .inner-header .nav li a:focus {
-    color: #f48cba;
-  }
-  .inner-header .nav li.current_page_item a {
-    font-weight: bold;
-    color: #666666;
-    border: 0;
-  }
-  .inner-header .nav li:after {
-    content: "-";
-    color: #adadad;
-    display: inline-block;
-    margin: 0 2px 0 5px;
-  }
-  .inner-header .nav li:last-child:after {
-    content: "";
-  }
-  .inner-header .nav li ul.sub-menu,
-  .inner-header .nav li ul.children {
+  .header .inner-header .nav ul.sub-menu,
+  .header .inner-header .nav ul.children {
     margin-top: 0;
     border: 1px solid #ccc;
     border-top: 0;
@@ -4394,8 +4447,8 @@ you can add resource intensive styles.
     /* highlight sub-menu current page */
   
   }
-  .inner-header .nav li ul.sub-menu li,
-  .inner-header .nav li ul.children li {
+  .header .inner-header .nav ul.sub-menu li,
+  .header .inner-header .nav ul.children li {
     /*
   				if you need to go deeper, go nuts
   				just remember deeper menus suck
@@ -4403,19 +4456,19 @@ you can add resource intensive styles.
   				*/
   
   }
-  .inner-header .nav li ul.sub-menu li a,
-  .inner-header .nav li ul.children li a {
+  .header .inner-header .nav ul.sub-menu li a,
+  .header .inner-header .nav ul.children li a {
     padding-left: 10px;
     border-right: 0;
     display: block;
     width: 180px;
     border-bottom: 1px solid #ccc;
   }
-  .inner-header .nav li ul.sub-menu li:last-child a,
-  .inner-header .nav li ul.children li:last-child a {
+  .header .inner-header .nav ul.sub-menu li:last-child a,
+  .header .inner-header .nav ul.children li:last-child a {
     border-bottom: 0;
   }
-  .inner-header .nav li:hover ul {
+  .header .inner-header .nav:hover ul {
     top: auto;
     display: block;
   }

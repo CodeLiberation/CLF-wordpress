@@ -2666,16 +2666,45 @@ LAYOUT & GRID STYLES
 /*********************
 HEADER STYLES
 *********************/
-.hero {
+.header {
+  /*********************
+NAVIGATION STYLES
+*********************/
+
+}
+.header nav ul.nav {
+  border: 0;
+  margin: 40px 0 40px;
+}
+.header nav ul.nav li {
+  display: inline-block;
+  margin: 0;
+}
+.header nav ul.nav li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #ed408c;
+  border-bottom: 1px solid #f48cba;
+  padding: 0;
+}
+.header nav ul.nav li a:hover,
+.header nav ul.nav li a:focus {
+  color: #f48cba;
+}
+.header nav ul.nav li:after {
+  content: "-";
+  color: #adadad;
+  display: inline-block;
+  margin: 0 2px 0 5px;
+}
+.header nav ul.nav li:last-child:after {
+  content: "";
+}
+.header .hero {
   margin: 0 auto 55px;
   padding: 0 0 55px;
 }
-/*********************
-NAVIGATION STYLES
-*********************/
-.inner-header .nav {
-  border: 0;
-  margin: 40px 0 40px;
+.header .inner-header {
   /* end .menu ul li */
 
   /* highlight current page */
@@ -2683,8 +2712,7 @@ NAVIGATION STYLES
   /* end current highlighters */
 
 }
-.inner-header .nav li {
-  display: inline-block;
+.header .inner-header .nav {
   /*
 		plan your menus and drop-downs wisely.
 		*/
@@ -2692,33 +2720,8 @@ NAVIGATION STYLES
   /* showing sub-menus */
 
 }
-.inner-header .nav li a {
-  display: inline-block;
-  text-decoration: none;
-  color: #ed408c;
-  border-bottom: 1px solid #f48cba;
-  padding: 0;
-}
-.inner-header .nav li a:hover,
-.inner-header .nav li a:focus {
-  color: #f48cba;
-}
-.inner-header .nav li.current_page_item a {
-  font-weight: bold;
-  color: #666666;
-  border: 0;
-}
-.inner-header .nav li:after {
-  content: "-";
-  color: #adadad;
-  display: inline-block;
-  margin: 0 2px 0 5px;
-}
-.inner-header .nav li:last-child:after {
-  content: "";
-}
-.inner-header .nav li ul.sub-menu,
-.inner-header .nav li ul.children {
+.header .inner-header .nav ul.sub-menu,
+.header .inner-header .nav ul.children {
   margin-top: 0;
   border: 1px solid #ccc;
   border-top: 0;
@@ -2728,8 +2731,8 @@ NAVIGATION STYLES
   /* highlight sub-menu current page */
 
 }
-.inner-header .nav li ul.sub-menu li,
-.inner-header .nav li ul.children li {
+.header .inner-header .nav ul.sub-menu li,
+.header .inner-header .nav ul.children li {
   /*
 				if you need to go deeper, go nuts
 				just remember deeper menus suck
@@ -2737,19 +2740,19 @@ NAVIGATION STYLES
 				*/
 
 }
-.inner-header .nav li ul.sub-menu li a,
-.inner-header .nav li ul.children li a {
+.header .inner-header .nav ul.sub-menu li a,
+.header .inner-header .nav ul.children li a {
   padding-left: 10px;
   border-right: 0;
   display: block;
   width: 180px;
   border-bottom: 1px solid #ccc;
 }
-.inner-header .nav li ul.sub-menu li:last-child a,
-.inner-header .nav li ul.children li:last-child a {
+.header .inner-header .nav ul.sub-menu li:last-child a,
+.header .inner-header .nav ul.children li:last-child a {
   border-bottom: 0;
 }
-.inner-header .nav li:hover ul {
+.header .inner-header .nav:hover ul {
   top: auto;
   display: block;
 }

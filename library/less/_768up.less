@@ -31,7 +31,30 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
+	nav {
+		ul.nav {border:0; margin:40px 0 40px;
+		li {display:inline-block; margin:0;
+
+			a {
+				display:inline-block;
+				text-decoration: none;
+				color:@pink;
+				border-bottom: 1px solid @light-pink;
+				padding:0;
+				&:hover, &:focus {
+					color:@light-pink;
+				}
+			}
+			&:after {content:"-"; color:@light-gray; display:inline-block; margin:0 2px 0 5px;}
+			&:first-child {}
+
+			&:last-child {
+				&:after {content:"";}
+			}
+		}
+	}
+	}
 
 	#logo {}
 		
@@ -41,28 +64,7 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 .inner-header {
-.nav {border:0; margin:40px 0 40px;
-	li {display:inline-block;
-
-		a {
-			display:inline-block;
-			text-decoration: none;
-			color:@pink;
-			border-bottom: 1px solid @light-pink;
-			padding:0;
-			&:hover, &:focus {
-				color:@light-pink;
-			}
-		}
-		&.current_page_item {
-			a {font-weight:@bold-weight; color:@gray; border:0;}
-		}
-		&:after {content:"-"; color:@light-gray; display:inline-block; margin:0 2px 0 5px;}
-		&:first-child {}
-
-		&:last-child {
-			&:after {content:"";}
-		}
+.nav {
 
 		/*
 		plan your menus and drop-downs wisely.
