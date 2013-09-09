@@ -188,7 +188,7 @@ h5, .h5 {
 	nav {
 		ul.nav {
 			li {
-				a {}
+				a {border-bottom: 1px solid @light-pink; padding: 10px 10px;}
 
 				&:first-child {}
 
@@ -217,9 +217,8 @@ and more scalable.
 		a {text-transform:lowercase;
 			display: block;
 			text-decoration: none;
-			padding: 10px 10px;
+			
 			color:@pink;
-			border-bottom: 1px solid @light-pink;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -231,9 +230,7 @@ and more scalable.
 
 			}
 		}
-		&.current_page_item {
-			a {font-weight:@bold-weight; color:@gray; border:0;}
-		}
+
 		&:first-child {}
 
 		&:last-child {}

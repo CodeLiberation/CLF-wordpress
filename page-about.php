@@ -42,8 +42,7 @@ Template Name: About
 		</a>
 
 		<section class="user-info">
-			<h2 class="user-name">
-			<a href="<?php echo $user_link; ?>" title="<?php echo $curauth->display_name; ?>"><?php echo $curauth->display_name; ?></a>
+			<h2 class="user-name"><?php echo $curauth->display_name; ?>
 		
 			<?php if(get_the_author_meta('twitter')) : ?>
 						<a href="http://twitter.com/<?php echo get_the_author_meta('twitter'); ?>" title="Visit <?php echo $user->display_name; ?>'s Twitter account" class="twitter">

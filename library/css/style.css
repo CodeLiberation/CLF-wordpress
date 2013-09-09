@@ -3177,6 +3177,10 @@ h5,
   overflow: hidden;
   text-indent: 1000px;
 }
+.header nav ul.nav li a {
+  border-bottom: 1px solid #f48cba;
+  padding: 10px 10px;
+}
 /*********************
 07. NAVIGATION STYLES
 *********************/
@@ -3212,9 +3216,7 @@ and more scalable.
   text-transform: lowercase;
   display: block;
   text-decoration: none;
-  padding: 10px 10px;
   color: #ed408c;
-  border-bottom: 1px solid #f48cba;
   /*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -3222,11 +3224,6 @@ and more scalable.
 			keep this file as small as possible!
 			*/
 
-}
-.nav li.current_page_item a {
-  font-weight: bold;
-  color: #666666;
-  border: 0;
 }
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
@@ -4112,13 +4109,12 @@ and more scalable.
   font-weight: bold;
   margin: 0 0 25px;
   border-bottom: 1px solid #e6e6e6;
-}
-.page-template-page-about-php .about-us .codelib-admins .admin-user .user-name a {
   color: #5bc8e4;
 }
 .page-template-page-about-php .about-us .codelib-admins .admin-user .user-name a.twitter {
-  color: #ed408c;
   font-size: 15px;
+  border-bottom: 1px solid #f48cba;
+  vertical-align: bottom;
 }
 /*
 LARGER MOBILE DEVICES
@@ -4343,7 +4339,7 @@ you can add resource intensive styles.
   /*********************
   NAVIGATION STYLES
   *********************/
-  .nav {
+  .inner-header .nav {
     border: 0;
     margin: 40px 0 40px;
     /* end .menu ul li */
@@ -4353,7 +4349,7 @@ you can add resource intensive styles.
     /* end current highlighters */
   
   }
-  .nav li {
+  .inner-header .nav li {
     display: inline-block;
     /*
   		plan your menus and drop-downs wisely.
@@ -4362,33 +4358,33 @@ you can add resource intensive styles.
     /* showing sub-menus */
   
   }
-  .nav li a {
+  .inner-header .nav li a {
     display: inline-block;
     text-decoration: none;
     color: #ed408c;
     border-bottom: 1px solid #f48cba;
     padding: 0;
   }
-  .nav li a:hover,
-  .nav li a:focus {
+  .inner-header .nav li a:hover,
+  .inner-header .nav li a:focus {
     color: #f48cba;
   }
-  .nav li.current_page_item a {
+  .inner-header .nav li.current_page_item a {
     font-weight: bold;
     color: #666666;
     border: 0;
   }
-  .nav li:after {
+  .inner-header .nav li:after {
     content: "-";
     color: #adadad;
     display: inline-block;
     margin: 0 2px 0 5px;
   }
-  .nav li:last-child:after {
+  .inner-header .nav li:last-child:after {
     content: "";
   }
-  .nav li ul.sub-menu,
-  .nav li ul.children {
+  .inner-header .nav li ul.sub-menu,
+  .inner-header .nav li ul.children {
     margin-top: 0;
     border: 1px solid #ccc;
     border-top: 0;
@@ -4398,8 +4394,8 @@ you can add resource intensive styles.
     /* highlight sub-menu current page */
   
   }
-  .nav li ul.sub-menu li,
-  .nav li ul.children li {
+  .inner-header .nav li ul.sub-menu li,
+  .inner-header .nav li ul.children li {
     /*
   				if you need to go deeper, go nuts
   				just remember deeper menus suck
@@ -4407,19 +4403,19 @@ you can add resource intensive styles.
   				*/
   
   }
-  .nav li ul.sub-menu li a,
-  .nav li ul.children li a {
+  .inner-header .nav li ul.sub-menu li a,
+  .inner-header .nav li ul.children li a {
     padding-left: 10px;
     border-right: 0;
     display: block;
     width: 180px;
     border-bottom: 1px solid #ccc;
   }
-  .nav li ul.sub-menu li:last-child a,
-  .nav li ul.children li:last-child a {
+  .inner-header .nav li ul.sub-menu li:last-child a,
+  .inner-header .nav li ul.children li:last-child a {
     border-bottom: 0;
   }
-  .nav li:hover ul {
+  .inner-header .nav li:hover ul {
     top: auto;
     display: block;
   }
