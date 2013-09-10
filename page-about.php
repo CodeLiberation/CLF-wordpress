@@ -12,7 +12,7 @@ Template Name: About
 			<?php the_content(); ?>
 		</section>
 	<?php endwhile; endif; ?>
-	<div class="about-us">
+	<div id="inner-content" class="wrap clearfix about-us">
 		<ul class="codelib-admins">
 	<?php
 

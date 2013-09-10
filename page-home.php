@@ -46,7 +46,7 @@ Template Name: Home Page
 										 	<section class="event-info">
 											 	<span class="event-date">%s - %s</span>
 												<span class="event-time">%s</span>
-												<p class="event-desc">'.$description.'</p>
+												<article class="event-desc">'.$description.'</article>
 												<a class="button" href="%s">Join this '.$btn_text.'</a> 
 											</section>
 										 </li>',

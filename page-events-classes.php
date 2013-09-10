@@ -12,10 +12,8 @@ Template Name: Events & Classes
 					<?php the_content(); ?>
 				</section>
 			<?php endwhile; endif; ?>
-			<div id="inner-content" class="wrap clearfix">
+			<div id="inner-content" class="wrap clearfix events-classes">
 			
-						<div id="main" class="eightcol first clearfix" role="main">
-
 							<?php
 							 $events = eo_get_events(array(
 							         'event_start_after'=>'today',
@@ -30,7 +28,7 @@ Template Name: Events & Classes
 										 if( eo_reoccurs($event->ID) ){
 										 $recurring_format = 'l\s'.' @ '.get_option('time_format');
 									 	}else{
-	  									 $recurring_format = get_option('time_format');
+	  									 $recurring_format = ' @ '.get_option('time_format');
 									 	}
 									   $post_object = get_post($event->ID);
 									   $description = $post_object->post_content;
@@ -38,13 +36,13 @@ Template Name: Events & Classes
 										$btn_text = strip_tags($event_category);
 							          printf(
 							             '<li>
-												<h3 class="event-title"><a href="%s">%s</a></h3>
-											 	<section class="event-info">
-												 	<span class="event-date">%s - %s</span>
-													<span class="event-time">%s</span>
-													<p class="event-desc">'.$description.'</p>
+												 	<section class="event-header">
+														<h3 class="event-title"><a href="%s">%s</a></h3>
+													 	<span class="event-date">%s - %s</span>
+														<span class="event-time">%s</span>
+													</section>
+													<article class="event-desc">'.$description.'</article>
 													<a class="button" href="%s">Join this '.$btn_text.'</a> 
-												</section>
 											 </li>',
 							             get_permalink($event->ID),
 							             get_the_title($event->ID),
@@ -58,9 +56,6 @@ Template Name: Events & Classes
 							  endif;
 							 ?>
 							
-
-						</div> <!-- end #main -->
-
 				</div> <!-- end #inner-content -->
 
 			</div> <!-- end #content -->
