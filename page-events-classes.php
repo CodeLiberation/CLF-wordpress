@@ -30,24 +30,28 @@ Template Name: Events & Classes
 									 	}else{
 	  									 $recurring_format = ' @ '.get_option('time_format');
 									 	}
+										if( eo_get_the_start($dateformat, $event->ID,null,$event->occurrence_id) == eo_get_the_end($dateformat, $event->ID,null,$event->occurrence_id)){
+											$enddate = "";
+										}else {
+											$enddate = '- '.eo_get_the_end($dateformat, $event->ID,null,$event->occurrence_id);
+										}
 									   $post_object = get_post($event->ID);
 									   $description = $post_object->post_content;
 										$event_category =  get_the_term_list( $event->ID, 'event-category', '', ', ','');
 										$btn_text = strip_tags($event_category);
 							          printf(
 							             '<li>
-												 	<section class="event-header">
+												 	<header class="event-header">
 														<h3 class="event-title"><a href="%s">%s</a></h3>
-													 	<span class="event-date">%s - %s</span>
+													 	<span class="event-date">%s '.$enddate.'</span>
 														<span class="event-time">%s</span>
-													</section>
+													</header>
 													<article class="event-desc">'.$description.'</article>
 													<a class="button" href="%s">Join this '.$btn_text.'</a> 
 											 </li>',
 							             get_permalink($event->ID),
 							             get_the_title($event->ID),
 							             eo_get_the_start($dateformat, $event->ID,null,$event->occurrence_id),
-											 eo_get_the_end($dateformat, $event->ID,null,$event->occurrence_id),
 							             eo_get_the_start($recurring_format, $event->ID,null,$event->occurrence_id),
 											 get_permalink($event->ID)
 							          );

@@ -3241,21 +3241,23 @@ and more scalable.
 /*********************
 08. POSTS & CONTENT STYLES
 *********************/
-#content #main {
+#content #inner-content {
   width: 90%;
   max-width: 650px;
   border-bottom: 1px dashed #5bc8e4;
   margin: 0 auto 35px;
   padding: 0 0 35px;
   border: 0;
+  padding: 0;
+  margin-bottom: 55px;
 }
-#content #main h1 {
+#content #inner-content h1 {
   font-size: 34px;
   font-weight: 400;
   margin: 0;
   color: #666666;
 }
-#content #main h1 strong.logotype {
+#content #inner-content h1 strong.logotype {
   -webkit-transition: none 0.2s ease-in-out;
   -moz-transition: none 0.2s ease-in-out;
   -ms-transition: none 0.2s ease-in-out;
@@ -4122,55 +4124,24 @@ textarea:focus {
 .home #content .entry-content footer .fine-print {
   float: right;
 }
-.page-template-page-about-php .about-us {
-  width: 90%;
-  max-width: 650px;
-  border-bottom: 1px dashed #5bc8e4;
-  margin: 0 auto 35px;
-  padding: 0 0 35px;
-  border: 0;
-  padding: 0;
-  margin-bottom: 55px;
-}
-.page-template-page-about-php .about-us h1 {
-  font-size: 34px;
-  font-weight: 400;
-  margin: 0;
-  color: #666666;
-}
-.page-template-page-about-php .about-us h1 strong.logotype {
-  -webkit-transition: none 0.2s ease-in-out;
-  -moz-transition: none 0.2s ease-in-out;
-  -ms-transition: none 0.2s ease-in-out;
-  -o-transition: none 0.2s ease-in-out;
-  transition: none 0.2s ease-in-out;
-  font-size: 0;
-  display: inline-block;
-  width: 489px;
-  height: 70px;
-  background: url("../images/logotype.png") no-repeat;
-  vertical-align: bottom;
-  margin-right: 10px;
-  margin-bottom: 8px;
-}
-.page-template-page-about-php .about-us .codelib-admins {
+#inner-content.about-us .codelib-admins {
   margin: 0;
   padding: 0;
 }
-.page-template-page-about-php .about-us .codelib-admins .admin-user {
+#inner-content.about-us .codelib-admins .admin-user {
   list-style: none;
   zoom: 1;
   margin: 0 0 25px;
 }
-.page-template-page-about-php .about-us .codelib-admins .admin-user:before,
-.page-template-page-about-php .about-us .codelib-admins .admin-user:after {
+#inner-content.about-us .codelib-admins .admin-user:before,
+#inner-content.about-us .codelib-admins .admin-user:after {
   content: "";
   display: table;
 }
-.page-template-page-about-php .about-us .codelib-admins .admin-user:after {
+#inner-content.about-us .codelib-admins .admin-user:after {
   clear: both;
 }
-.page-template-page-about-php .about-us .codelib-admins .admin-user .user-avatar {
+#inner-content.about-us .codelib-admins .admin-user .user-avatar {
   display: block;
   float: left;
   width: 25%;
@@ -4179,58 +4150,27 @@ textarea:focus {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.page-template-page-about-php .about-us .codelib-admins .admin-user .user-avatar img {
+#inner-content.about-us .codelib-admins .admin-user .user-avatar img {
   display: block;
   width: 100%;
   height: auto;
 }
-.page-template-page-about-php .about-us .codelib-admins .admin-user .user-info {
+#inner-content.about-us .codelib-admins .admin-user .user-info {
   float: left;
   width: 75%;
 }
-.page-template-page-about-php .about-us .codelib-admins .admin-user .user-name {
+#inner-content.about-us .codelib-admins .admin-user .user-name {
   font-weight: bold;
   margin: 0 0 15px;
   border-bottom: 1px solid #e6e6e6;
   color: #5bc8e4;
 }
-.page-template-page-about-php .about-us .codelib-admins .admin-user .user-name a.twitter {
+#inner-content.about-us .codelib-admins .admin-user .user-name a.twitter {
   font-size: 15px;
   border-bottom: 1px solid #f48cba;
   vertical-align: bottom;
 }
-.page-template-page-events-classes-php .events-classes {
-  width: 90%;
-  max-width: 650px;
-  border-bottom: 1px dashed #5bc8e4;
-  margin: 0 auto 35px;
-  padding: 0 0 35px;
-  border: 0;
-  padding: 0;
-  margin-bottom: 55px;
-}
-.page-template-page-events-classes-php .events-classes h1 {
-  font-size: 34px;
-  font-weight: 400;
-  margin: 0;
-  color: #666666;
-}
-.page-template-page-events-classes-php .events-classes h1 strong.logotype {
-  -webkit-transition: none 0.2s ease-in-out;
-  -moz-transition: none 0.2s ease-in-out;
-  -ms-transition: none 0.2s ease-in-out;
-  -o-transition: none 0.2s ease-in-out;
-  transition: none 0.2s ease-in-out;
-  font-size: 0;
-  display: inline-block;
-  width: 489px;
-  height: 70px;
-  background: url("../images/logotype.png") no-repeat;
-  vertical-align: bottom;
-  margin-right: 10px;
-  margin-bottom: 8px;
-}
-.page-template-page-events-classes-php .events-classes .events-classes-list li {
+#inner-content.events-classes .events-classes-list li {
   margin-bottom: 10px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
@@ -4239,29 +4179,29 @@ textarea:focus {
   padding: 0 0 20px;
   zoom: 1;
 }
-.page-template-page-events-classes-php .events-classes .events-classes-list li:before,
-.page-template-page-events-classes-php .events-classes .events-classes-list li:after {
+#inner-content.events-classes .events-classes-list li:before,
+#inner-content.events-classes .events-classes-list li:after {
   content: "";
   display: table;
 }
-.page-template-page-events-classes-php .events-classes .events-classes-list li:after {
+#inner-content.events-classes .events-classes-list li:after {
   clear: both;
 }
-.page-template-page-events-classes-php .events-classes .events-classes-list .event-header {
+#inner-content.events-classes .events-classes-list .event-header {
   padding: 20px 20px 10px;
   border-bottom: 1px solid #e6e6e6;
   text-align: right;
   zoom: 1;
 }
-.page-template-page-events-classes-php .events-classes .events-classes-list .event-header:before,
-.page-template-page-events-classes-php .events-classes .events-classes-list .event-header:after {
+#inner-content.events-classes .events-classes-list .event-header:before,
+#inner-content.events-classes .events-classes-list .event-header:after {
   content: "";
   display: table;
 }
-.page-template-page-events-classes-php .events-classes .events-classes-list .event-header:after {
+#inner-content.events-classes .events-classes-list .event-header:after {
   clear: both;
 }
-.page-template-page-events-classes-php .events-classes .events-classes-list .event-title {
+#inner-content.events-classes .events-classes-list .event-title {
   display: inline-block;
   font-size: 24px;
   line-height: 24px;
@@ -4269,31 +4209,41 @@ textarea:focus {
   font-weight: bold;
   float: left;
 }
-.page-template-page-events-classes-php .events-classes .events-classes-list .event-title a {
+#inner-content.events-classes .events-classes-list .event-title a {
   color: #5bc8e4;
   display: block;
 }
-.page-template-page-events-classes-php .events-classes .events-classes-list .event-date,
-.page-template-page-events-classes-php .events-classes .events-classes-list .event-time {
+#inner-content.events-classes .events-classes-list .event-date,
+#inner-content.events-classes .events-classes-list .event-time {
   text-transform: uppercase;
   font-size: 12px;
   line-height: 12px;
   vertical-align: bottom;
 }
-.page-template-page-events-classes-php .events-classes .events-classes-list .event-date {
+#inner-content.events-classes .events-classes-list .event-date {
   color: #666666;
 }
-.page-template-page-events-classes-php .events-classes .events-classes-list .event-time {
+#inner-content.events-classes .events-classes-list .event-time {
   color: #ed408c;
 }
-.page-template-page-events-classes-php .events-classes .events-classes-list .event-desc {
+#inner-content.events-classes .events-classes-list .event-desc {
   padding: 20px 20px 0;
 }
-.page-template-page-events-classes-php .events-classes .events-classes-list .event-desc strong {
+#inner-content.events-classes .events-classes-list .event-desc strong {
   text-transform: uppercase;
   color: #ed408c;
 }
-.page-template-page-events-classes-php .events-classes .events-classes-list .button {
+#inner-content.events-classes .events-classes-list .event-desc .eo-event-meta {
+  margin: 0;
+}
+#inner-content.events-classes .events-classes-list .event-desc .eo-event-meta li {
+  margin: 0;
+  padding: 0;
+}
+#inner-content.events-classes .events-classes-list .event-desc .eo-event-meta + p {
+  margin-top: 0;
+}
+#inner-content.events-classes .events-classes-list .button {
   margin-right: 20px;
   font-size: 16px;
   padding: 10px 20px;
