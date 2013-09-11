@@ -3272,7 +3272,7 @@ and more scalable.
   margin-right: 10px;
   margin-bottom: 8px;
 }
-#content #main hr {
+#content hr {
   border: 1px solid #e6e6e6;
   border-width: 0 0 1px;
 }
@@ -4247,6 +4247,33 @@ textarea:focus {
   margin-right: 20px;
   font-size: 16px;
   padding: 10px 20px;
+}
+#inner-content.events-classes .article-header.event-header {
+  zoom: 1;
+}
+#inner-content.events-classes .article-header.event-header:before,
+#inner-content.events-classes .article-header.event-header:after {
+  content: "";
+  display: table;
+}
+#inner-content.events-classes .article-header.event-header:after {
+  clear: both;
+}
+#inner-content.events-classes .article-header.event-header .event-title {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0 0 2px;
+}
+#inner-content.events-classes .article-header.event-header .event-entry-meta {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+  margin: 15px 0 0;
+}
+#inner-content.events-classes .article-header.event-header .event-entry-meta .event-date {
+  color: #666666;
+}
+#inner-content.events-classes .article-header.event-header .event-entry-meta .event-time {
+  color: #ed408c;
 }
 /*
 LARGER MOBILE DEVICES

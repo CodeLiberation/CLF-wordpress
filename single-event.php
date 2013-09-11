@@ -17,51 +17,58 @@ single-bookmarks.php
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap clearfix">
-
-						<div id="main" class="clearfix" role="main">
+				<div id="inner-content" class="wrap clearfix events-classes">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
-								<header class="article-header">
+								<header class="article-header event-header">
 
-									<h1 class="single-title custom-post-type-title"><?php the_title(); ?></h1>
+									<h1 class="single-title custom-post-type-title event-title"><?php the_title(); ?></h1>
+									<?php if( eo_is_all_day() ){
+										$date_format = 'F j, Y'; 
+									}else{
+										$date_format = 'F j, Y @ ' . get_option('time_format'); 
+									} ?>
+									<section class="event-entry-meta">
 
+										<!-- Output the date of the occurrence-->
+										<?php
+										//Format date/time according to whether its an all day event.
+										//Use microdata http://support.google.com/webmasters/bin/answer.py?hl=en&answer=176035
+											 $event_ID = get_the_ID();
+											 $dateformat = ( get_option('date_format'));
+											 if( eo_reoccurs($event_ID) ){
+											 $recurring_format = ' l\s'.' @ '.get_option('time_format');
+											}else{
+											 $recurring_format = ' @ '.get_option('time_format');
+											}
+											$startdate = eo_get_the_start($dateformat, $event_ID);
+											if( eo_get_the_start($dateformat, $event_ID) == eo_get_the_end($dateformat, $event_ID)){
+												$enddate = "";
+											}else {
+												$enddate = ' - '.eo_get_the_end($dateformat, $event_ID);
+											}
+										?>
+									 	<span class="event-date"><?php echo $startdate.$enddate;?></span>
+										<span class="event-time"><?php eo_the_start($recurring_format);?></span>
+			
+									</section><!-- .event-entry-meta -->
 								</header> <!-- end article header -->
 
 								<section class="entry-content clearfix">
 
-									<!-- Get event information, see template: event-meta-event-single.php -->
-									<?php eo_get_template_part('event-meta','event-single'); ?>
-
 									<!-- The content or the description of the event-->
 									<?php the_content(); ?>
+									<!-- Get event information, see template: event-meta-event-single.php -->
+									<?php eo_get_template_part('event-meta','event-single'); ?>
+									<?php $registration_link = get_post_meta($event_ID,'registration_link', true);
+									if ($registration_link) {
+										echo '<a href="'.$registration_link.'" class="button">Register now</a>';
+									} ?>
 									
 								</section> <!-- end article section -->
-
-								<footer class="entry-meta">
-								<?php
-									//Events have their own 'event-category' taxonomy. Get list of categories this event is in.
-									$categories_list = get_the_term_list( get_the_ID(), 'event-category', '', ', ',''); 
-
-									if ( '' != $categories_list ) {
-										$utility_text = __( 'See more in the same category: %1$s - <a href="%2$s" title="Permalink to %3$s" rel="bookmark">Permalink</a>', 'eventorganiser' );
-									} else {
-										$utility_text = __( 'This event was posted by <a href="%5$s">%4$s</a>. Bookmark the <a href="%2$s" title="Permalink to %3$s" rel="bookmark">permalink</a>.', 'eventorganiser' );
-									}
-									printf($utility_text,
-										$categories_list,
-										esc_url( get_permalink() ),
-										the_title_attribute( 'echo=0' ),
-										get_the_author(),
-										esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )
-									);
-								?>
-
-								<?php edit_post_link( __( 'Edit'), '<span class="edit-link">', '</span>' ); ?>
-								</footer><!-- .entry-meta -->
 								
 
 							</article> <!-- end article -->
@@ -83,8 +90,6 @@ single-bookmarks.php
 									</article>
 
 							<?php endif; ?>
-
-						</div> <!-- end #main -->
 
 				</div> <!-- end #inner-content -->
 

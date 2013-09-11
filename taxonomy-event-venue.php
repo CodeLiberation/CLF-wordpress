@@ -69,28 +69,30 @@ get_header(); ?>
 				</a>
 				</h3>
 		
-				<span class="event-entry-meta event-date">
+				<section class="event-entry-meta event-date">
 
 					<!-- Output the date of the occurrence-->
 					<?php
 					//Format date/time according to whether its an all day event.
 					//Use microdata http://support.google.com/webmasters/bin/answer.py?hl=en&answer=176035
-					  $dateformat = ( get_option('date_format'));
-					 if( eo_reoccurs() ){
-					 $recurring_format = 'l\s'.' @ '.get_option('time_format');
-				 	}else{
-					 $recurring_format = ' @ '.get_option('time_format');
-				 	}
-					
-					if( eo_the_start($dateformat) == eo_the_end($dateformat)){
-						$enddate = "";
-					}else {
-						$enddate = '- '.eo_get_the_end($dateformat, $event->ID,null,$event->occurrence_id);
-					}
+						 $event_ID = get_the_ID();
+						 $dateformat = ( get_option('date_format'));
+						 if( eo_reoccurs($event_ID) ){
+						 $recurring_format = ' l\s'.' @ '.get_option('time_format');
+						}else{
+						 $recurring_format = ' @ '.get_option('time_format');
+						}
+						$startdate = eo_get_the_start($dateformat, $event_ID);
+						if( eo_get_the_start($dateformat, $event_ID) == eo_get_the_end($dateformat, $event_ID)){
+							$enddate = "";
+						}else {
+							$enddate = ' - '.eo_get_the_end($dateformat, $event_ID);
+						}
 					?>
-				 	<span class="event-date"><?php eo_the_start($recurring_format);?></span>
+				 	<span class="event-date"><?php echo $startdate.$enddate;?></span>
+					<span class="event-time"><?php eo_the_start($recurring_format);?></span>
 			
-				</span><!-- .event-entry-meta -->
+				</section><!-- .event-entry-meta -->
 		
 				<div style="clear:both;"></div>
 			</header><!-- .entry-header -->
