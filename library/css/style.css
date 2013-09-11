@@ -3789,9 +3789,12 @@ textarea:focus {
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   border-radius: 12px;
-  float: left;
-  width: 31.3333%;
-  margin: 0 3% 0 0;
+  margin: 0 0 20px;
+  -webkit-transition: none 0.2s ease-in-out;
+  -moz-transition: none 0.2s ease-in-out;
+  -ms-transition: none 0.2s ease-in-out;
+  -o-transition: none 0.2s ease-in-out;
+  transition: none 0.2s ease-in-out;
 }
 .home #content .entry-content.events-classes .events-classes-list li:last-child {
   margin: 0;
@@ -3825,8 +3828,17 @@ textarea:focus {
   -moz-border-radius: 0 0 12px 12px;
   border-radius: 0 0 12px 12px;
   padding: 25px 18px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
+  zoom: 1;
+}
+.home #content .entry-content.events-classes .events-classes-list li .event-info:before,
+.home #content .entry-content.events-classes .events-classes-list li .event-info:after {
+  content: "";
+  display: table;
+}
+.home #content .entry-content.events-classes .events-classes-list li .event-info:after {
+  clear: both;
 }
 .home #content .entry-content.events-classes .events-classes-list li .event-info .event-date,
 .home #content .entry-content.events-classes .events-classes-list li .event-info .event-time {
@@ -3835,6 +3847,7 @@ textarea:focus {
 }
 .home #content .entry-content.events-classes .events-classes-list li .event-info .event-date {
   color: #666666;
+  margin-bottom: 3px;
 }
 .home #content .entry-content.events-classes .events-classes-list li .event-info .event-time {
   color: #ed408c;
@@ -3847,11 +3860,11 @@ textarea:focus {
   color: #ed408c;
 }
 .home #content .entry-content.events-classes .events-classes-list li .event-info .button {
-  float: none;
-  display: block;
-  margin: 0 auto;
-  width: 200px;
-  text-align: center;
+  -webkit-transition: none 0.2s ease-in-out;
+  -moz-transition: none 0.2s ease-in-out;
+  -ms-transition: none 0.2s ease-in-out;
+  -o-transition: none 0.2s ease-in-out;
+  transition: none 0.2s ease-in-out;
 }
 .home #content .entry-content.events-classes footer {
   color: #b23069;
@@ -3869,26 +3882,49 @@ textarea:focus {
 .home #content .entry-content.about .article-header .fine-print {
   color: #bde9f4;
 }
+.home #content .entry-content.about .area-content ul {
+  zoom: 1;
+  -webkit-transition: none 0.2s ease-in-out;
+  -moz-transition: none 0.2s ease-in-out;
+  -ms-transition: none 0.2s ease-in-out;
+  -o-transition: none 0.2s ease-in-out;
+  transition: none 0.2s ease-in-out;
+}
+.home #content .entry-content.about .area-content ul:before,
+.home #content .entry-content.about .area-content ul:after {
+  content: "";
+  display: table;
+}
+.home #content .entry-content.about .area-content ul:after {
+  clear: both;
+}
 .home #content .entry-content.about .area-content ul:first-child {
   margin: 0;
-  float: left;
-  width: 16%;
-  margin: 0 1% 0 0;
 }
 .home #content .entry-content.about .area-content ul:first-child li {
-  margin: 0 0 12px;
+  margin: 0 2% 12px 0;
+  width: 48.5%;
+  float: left;
+  -webkit-transition: none 0.2s ease-in-out;
+  -moz-transition: none 0.2s ease-in-out;
+  -ms-transition: none 0.2s ease-in-out;
+  -o-transition: none 0.2s ease-in-out;
+  transition: none 0.2s ease-in-out;
 }
 .home #content .entry-content.about .area-content ul:first-child li a {
+  max-height: 200px;
   display: block;
   border: 7px solid #ffffff;
-  max-height: 175px;
   overflow: hidden;
 }
 .home #content .entry-content.about .area-content ul:first-child li a img {
   display: block;
+  width: 100%;
+  min-height: 100%;
 }
 .home #content .entry-content.about .area-content ul:first-child li:last-child {
   margin-bottom: 0;
+  margin-right: 0;
 }
 .home #content .entry-content.about .area-content > p {
   color: #4496ab;
@@ -3900,8 +3936,11 @@ textarea:focus {
 .home #content .entry-content.about .area-content > p + ul {
   zoom: 1;
   margin: 0;
-  width: 83%;
-  float: left;
+  -webkit-transition: none 0.2s ease-in-out;
+  -moz-transition: none 0.2s ease-in-out;
+  -ms-transition: none 0.2s ease-in-out;
+  -o-transition: none 0.2s ease-in-out;
+  transition: none 0.2s ease-in-out;
 }
 .home #content .entry-content.about .area-content > p + ul:before,
 .home #content .entry-content.about .area-content > p + ul:after {
@@ -3913,8 +3952,8 @@ textarea:focus {
 }
 .home #content .entry-content.about .area-content > p + ul li {
   height: 145px;
-  width: 24.25%;
-  margin: 0 1% 25px 0;
+  width: 48.5%;
+  margin: 0 2% 25px 0;
   float: left;
   background: #def4fa;
   -webkit-border-radius: 12px;
@@ -3924,6 +3963,14 @@ textarea:focus {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
+  -webkit-transition: none 0.2s ease-in-out;
+  -moz-transition: none 0.2s ease-in-out;
+  -ms-transition: none 0.2s ease-in-out;
+  -o-transition: none 0.2s ease-in-out;
+  transition: none 0.2s ease-in-out;
+}
+.home #content .entry-content.about .area-content > p + ul li:nth-child(2n) {
+  margin-right: 0;
 }
 .home #content .entry-content.about .area-content > p + ul li blockquote {
   margin: 0;
@@ -3941,9 +3988,6 @@ textarea:focus {
   vertical-align: middle;
   font-size: 15px;
   line-height: 18px;
-}
-.home #content .entry-content.about .area-content > p + ul li:nth-child(4n) {
-  margin-right: 0;
 }
 .home #content .entry-content.about .area-content > p + ul li:after {
   top: 100%;
@@ -4002,9 +4046,7 @@ textarea:focus {
 }
 .home #content .entry-content.social-media .area-content .imgdisplay {
   height: 145px;
-  width: 24.25%;
-  margin: 0 1% 25px 0;
-  float: left;
+  margin: 0 0 25px 0;
   background: #f2f2f2;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
@@ -4040,34 +4082,7 @@ textarea:focus {
   text-decoration: none;
 }
 .home #content .entry-content.social-media .area-content .imgdisplay .tweetlink {
-  position: absolute;
-  left: 12px;
-  bottom: 0;
   display: none;
-}
-.home #content .entry-content.social-media .area-content .imgdisplay .tweetlink a {
-  font-family: "SSPika";
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: none;
-  text-rendering: optimizeLegibility;
-  white-space: nowrap;
-  -webkit-font-feature-settings: "liga";
-  -moz-font-feature-settings: "liga=1";
-  -moz-font-feature-settings: "liga";
-  -ms-font-feature-settings: "liga" 1;
-  -o-font-feature-settings: "liga";
-  font-feature-settings: "liga";
-  -webkit-font-smoothing: antialiased;
-  font-size: 15px;
-  margin: 0 10px 0 0;
-  color: #5bc8e4;
-}
-.home #content .entry-content.social-media .area-content .imgdisplay .tweetlink a:hover {
-  color: #87d7eb;
-}
-.home #content .entry-content.social-media .area-content .imgdisplay:hover .tweetlink {
-  display: block;
 }
 .home #content .entry-content.social-media .area-content .imgdisplay:last-of-type {
   margin-right: 0;
@@ -4116,13 +4131,23 @@ textarea:focus {
   font-size: 24px;
   line-height: 24px;
   text-transform: lowercase;
+  zoom: 1;
+}
+.home #content .entry-content footer:before,
+.home #content .entry-content footer:after {
+  content: "";
+  display: table;
+}
+.home #content .entry-content footer:after {
+  clear: both;
 }
 .home #content .entry-content footer a {
   text-decoration: none;
   border-bottom: 1px solid;
 }
 .home #content .entry-content footer .fine-print {
-  float: right;
+  display: block;
+  margin: 20px 0 0;
 }
 #inner-content.about-us .codelib-admins {
   margin: 0;
@@ -4274,6 +4299,74 @@ textarea:focus {
 }
 #inner-content.events-classes .article-header.event-header .event-entry-meta .event-time {
   color: #ed408c;
+}
+/*
+SMALLER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*/
+@media only screen and (max-width: 560px) {
+  .hero h1 {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+  .hero h1 strong.logotype {
+    background: none;
+    font-size: 24px;
+    width: auto;
+    height: auto;
+    margin-bottom: 0;
+    margin-right: 6px;
+    font-weight: 400;
+  }
+  .home #content .entry-content {
+    padding: 25px;
+  }
+  .home #content .entry-content.about .area-content ul:first-child {
+    margin-bottom: 20px;
+  }
+  .home #content .entry-content.about .area-content ul:first-child li {
+    width: 100%;
+    margin-right: 0;
+    float: none;
+  }
+  .home #content .entry-content.about .area-content ul:first-child li a {
+    max-height: 250px;
+  }
+  .home #content .entry-content.about .area-content > p + ul {
+    width: 100%;
+    float: none;
+  }
+  .home #content .entry-content.about .area-content > p + ul li {
+    height: 145px;
+    width: 100%;
+    margin: 0 0 25px 0;
+  }
+  .home #content .entry-content.about .area-content > p + ul li:nth-child(2n),
+  .home #content .entry-content.about .area-content > p + ul li:nth-child(3n),
+  .home #content .entry-content.about .area-content > p + ul li:nth-child(8) {
+    margin-right: 0;
+  }
+  .home #content .entry-content.about .area-content > p + ul li:nth-child(7),
+  .home #content .entry-content.about .area-content > p + ul li:nth-child(8) {
+    width: 100%;
+  }
+  #inner-content.events-classes .events-classes-list li .event-date {
+    margin-top: 10px;
+  }
+  #inner-content.events-classes .events-classes-list li .event-date,
+  #inner-content.events-classes .events-classes-list li .event-time {
+    display: block;
+    float: left;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .footer nav ul.nav {
+    border: 0;
+  }
 }
 /*
 LARGER MOBILE DEVICES
@@ -4633,6 +4726,55 @@ you can add resource intensive styles.
   
   }
   /* end .footer-links */
+  /*********************
+  Special styles
+  *********************/
+  .home #content .entry-content.about .area-content ul:first-child {
+    width: 30%;
+    float: left;
+    margin: 0 2% 0 0;
+  }
+  .home #content .entry-content.about .area-content ul:first-child li {
+    width: 100%;
+    margin-right: 0;
+    float: none;
+  }
+  .home #content .entry-content.about .area-content ul:first-child li a {
+    max-height: 230px;
+  }
+  .home #content .entry-content.about .area-content > p + ul {
+    width: 68%;
+    float: left;
+  }
+  .home #content .entry-content.about .area-content > p + ul li {
+    height: 145px;
+    width: 31.6666%;
+    margin: 0 2% 25px 0;
+  }
+  .home #content .entry-content.about .area-content > p + ul li:nth-child(2n) {
+    margin-right: 2%;
+  }
+  .home #content .entry-content.about .area-content > p + ul li:nth-child(3n),
+  .home #content .entry-content.about .area-content > p + ul li:nth-child(8) {
+    margin-right: 0;
+  }
+  .home #content .entry-content.about .area-content > p + ul li:nth-child(7),
+  .home #content .entry-content.about .area-content > p + ul li:nth-child(8) {
+    width: 48.5%;
+  }
+  .home #content .entry-content.about footer .fine-print {
+    float: right;
+    margin: 0;
+  }
+  .home #content .entry-content.social-media .area-content .imgdisplay {
+    height: 145px;
+    width: 49%;
+    margin: 0 2% 25px 0;
+    float: left;
+  }
+  .home #content .entry-content.social-media .area-content .imgdisplay:nth-of-type(3) {
+    margin-right: 0;
+  }
 }
 /*
 DESKTOP
@@ -4651,6 +4793,61 @@ you can add resource intensive styles.
   be seen on the Desktop. 
   
   ******************************************************************/
+  .home #content .entry-content.events-classes .events-classes-list li {
+    float: left;
+    width: 31.3333%;
+    margin: 0 3% 0 0;
+  }
+  .home #content .entry-content.events-classes .events-classes-list li .event-info {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .home #content .entry-content.events-classes .events-classes-list li .event-info .button {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    text-align: center;
+  }
+  .home #content .entry-content.about .area-content ul:first-child {
+    width: 20%;
+    float: left;
+    margin: 0 1% 0 0;
+  }
+  .home #content .entry-content.about .area-content ul:first-child li a {
+    max-height: 175px;
+  }
+  .home #content .entry-content.about .area-content > p + ul {
+    width: 79%;
+    float: left;
+  }
+  .home #content .entry-content.about .area-content > p + ul li {
+    height: 145px;
+    width: 24.25%;
+    margin: 0 1% 25px 0;
+  }
+  .home #content .entry-content.about .area-content > p + ul li:nth-child(2n) {
+    margin-right: 1%;
+  }
+  .home #content .entry-content.about .area-content > p + ul li:nth-child(3n) {
+    margin-right: 1%;
+  }
+  .home #content .entry-content.about .area-content > p + ul li:nth-child(4n) {
+    margin-right: 0;
+  }
+  .home #content .entry-content.about .area-content > p + ul li:nth-child(7),
+  .home #content .entry-content.about .area-content > p + ul li:nth-child(8) {
+    width: 24.25%;
+  }
+  .home #content .entry-content.social-media .area-content .imgdisplay {
+    height: 145px;
+    width: 24.25%;
+    margin: 0 1% 25px 0;
+    float: left;
+  }
+  .home #content .entry-content.social-media .area-content .imgdisplay:nth-of-type(3) {
+    margin-right: 1%;
+  }
 }
 /*
 LARGE VIEWING SIZE
@@ -4667,6 +4864,20 @@ This is for the larger monitors and possibly full screen viewers.
   on larger screens.
   
   ******************************************************************/
+  .home #content .entry-content.about .area-content ul:first-child {
+    width: 16%;
+    float: left;
+  }
+  .home #content .entry-content.about .area-content > p + ul {
+    width: 83%;
+    float: left;
+  }
+  .home #content .entry-content.social-media .imgdisplay {
+    height: 145px;
+    width: 24.25%;
+    margin: 0 1% 25px 0;
+    float: left;
+  }
 }
 /*
 RETINA (2x RESOLUTION DEVICES)

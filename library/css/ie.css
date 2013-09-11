@@ -2808,6 +2808,55 @@ mobile. Make sure to double check these!
 
 }
 /* end .footer-links */
+/*********************
+Special styles
+*********************/
+.home #content .entry-content.about .area-content ul:first-child {
+  width: 30%;
+  float: left;
+  margin: 0 2% 0 0;
+}
+.home #content .entry-content.about .area-content ul:first-child li {
+  width: 100%;
+  margin-right: 0;
+  float: none;
+}
+.home #content .entry-content.about .area-content ul:first-child li a {
+  max-height: 230px;
+}
+.home #content .entry-content.about .area-content > p + ul {
+  width: 68%;
+  float: left;
+}
+.home #content .entry-content.about .area-content > p + ul li {
+  height: 145px;
+  width: 31.6666%;
+  margin: 0 2% 25px 0;
+}
+.home #content .entry-content.about .area-content > p + ul li:nth-child(2n) {
+  margin-right: 2%;
+}
+.home #content .entry-content.about .area-content > p + ul li:nth-child(3n),
+.home #content .entry-content.about .area-content > p + ul li:nth-child(8) {
+  margin-right: 0;
+}
+.home #content .entry-content.about .area-content > p + ul li:nth-child(7),
+.home #content .entry-content.about .area-content > p + ul li:nth-child(8) {
+  width: 48.5%;
+}
+.home #content .entry-content.about footer .fine-print {
+  float: right;
+  margin: 0;
+}
+.home #content .entry-content.social-media .area-content .imgdisplay {
+  height: 145px;
+  width: 49%;
+  margin: 0 2% 25px 0;
+  float: left;
+}
+.home #content .entry-content.social-media .area-content .imgdisplay:nth-of-type(3) {
+  margin-right: 0;
+}
 /******************************************************************
 Site Name: 
 Author: 
@@ -2818,6 +2867,61 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop. 
 
 ******************************************************************/
+.home #content .entry-content.events-classes .events-classes-list li {
+  float: left;
+  width: 31.3333%;
+  margin: 0 3% 0 0;
+}
+.home #content .entry-content.events-classes .events-classes-list li .event-info {
+  font-size: 14px;
+  line-height: 16px;
+}
+.home #content .entry-content.events-classes .events-classes-list li .event-info .button {
+  float: none;
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  text-align: center;
+}
+.home #content .entry-content.about .area-content ul:first-child {
+  width: 20%;
+  float: left;
+  margin: 0 1% 0 0;
+}
+.home #content .entry-content.about .area-content ul:first-child li a {
+  max-height: 175px;
+}
+.home #content .entry-content.about .area-content > p + ul {
+  width: 79%;
+  float: left;
+}
+.home #content .entry-content.about .area-content > p + ul li {
+  height: 145px;
+  width: 24.25%;
+  margin: 0 1% 25px 0;
+}
+.home #content .entry-content.about .area-content > p + ul li:nth-child(2n) {
+  margin-right: 1%;
+}
+.home #content .entry-content.about .area-content > p + ul li:nth-child(3n) {
+  margin-right: 1%;
+}
+.home #content .entry-content.about .area-content > p + ul li:nth-child(4n) {
+  margin-right: 0;
+}
+.home #content .entry-content.about .area-content > p + ul li:nth-child(7),
+.home #content .entry-content.about .area-content > p + ul li:nth-child(8) {
+  width: 24.25%;
+}
+.home #content .entry-content.social-media .area-content .imgdisplay {
+  height: 145px;
+  width: 24.25%;
+  margin: 0 1% 25px 0;
+  float: left;
+}
+.home #content .entry-content.social-media .area-content .imgdisplay:nth-of-type(3) {
+  margin-right: 1%;
+}
 /* 
 you can call the larger styles if you want, but there's really no need 
 */

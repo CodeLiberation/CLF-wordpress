@@ -4,6 +4,45 @@
 	}
 }
 
+.home {
+	#content {
+		.entry-content {padding:25px;
+			&.events-classes {
+				.events-classes-list {
+				}
+			}
+			&.about {
+				.area-content {
+					ul {
+						&:first-child {margin-bottom:20px;
+							li {width:100%; margin-right:0; float:none;
+								a {max-height:250px;}
+							}
+						}
+					}
+					> p {
+						+ ul {width:100%; float:none;
+							li {height:145px; width:100%; margin:0 0 25px 0;
+								&:nth-child(2n), &:nth-child(3n), &:nth-child(8) {margin-right:0;}
+								&:nth-child(7), &:nth-child(8) {width:100%;}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#inner-content.events-classes {
+	.events-classes-list {
+		li {
+			.event-date {margin-top:10px;}
+			.event-date, .event-time {display:block; float:left; width:100%; text-align:left; font-size:@p-size; line-height:@p-size;}
+		}
+	}
+}
+
 .footer {
 	nav {
 		ul.nav {border:0;}
