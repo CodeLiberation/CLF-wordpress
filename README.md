@@ -14,3 +14,4 @@ If you need a free LESS compiler, use [SimpLESS](http://wearekiss.com/simpless).
 * MailChimp Widget
 * Advanced Custom Fields
 * Advanced Excerpt
+* AI Twitter Feed

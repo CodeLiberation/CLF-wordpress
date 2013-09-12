@@ -41,6 +41,13 @@ Template Name: Home Page
 								   $description = get_the_excerpt();
 									$event_category =  get_the_term_list( $event->ID, 'event-category', '', ', ','');
 									$btn_text = strip_tags($event_category);
+									$registration_link = get_post_meta($event->ID,'registration_link', true);
+									if ($registration_link) {
+										$reg_url = $registration_link;
+									}
+									else {
+										$reg_url = get_permalink($event->ID);
+									}
 						          printf(
 						             '<li>
 											<h3 class="event-title"><a href="%s">%s</a></h3>
@@ -48,15 +55,14 @@ Template Name: Home Page
 											 	<span class="event-date">%s - %s</span>
 												<span class="event-time">%s</span>
 												<article class="event-desc">'.$description.'</article>
-												<a class="button" href="%s">Join this '.$btn_text.'</a> 
+												<a class="button" href="'.$reg_url.'">Join this '.$btn_text.'</a> 
 											</section>
 										 </li>',
 						             get_permalink($event->ID),
 						             get_the_title($event->ID),
 						             eo_get_the_start($dateformat, $event->ID,null,$event->occurrence_id),
 										 eo_get_the_end($dateformat, $event->ID,null,$event->occurrence_id),
-						             eo_get_the_start($recurring_format, $event->ID,null,$event->occurrence_id),
-										 get_permalink($event->ID)
+						             eo_get_the_start($recurring_format, $event->ID,null,$event->occurrence_id)
 						          );
 						     endforeach;
 						     echo '</ul>';
