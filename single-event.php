@@ -95,4 +95,4 @@ single-bookmarks.php
 
 			</div> <!-- end #content -->
 
-<?php get_footer(); ?>
+<?php get_footer('events-inner'); ?>

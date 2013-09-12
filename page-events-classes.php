@@ -36,7 +36,8 @@ Template Name: Events & Classes
 											$enddate = '- '.eo_get_the_end($dateformat, $event->ID,null,$event->occurrence_id);
 										}
 									   $post_object = get_post($event->ID);
-									   $description = $post_object->post_content;
+										setup_postdata($post_object);
+									   $description = get_the_excerpt();
 										$event_category =  get_the_term_list( $event->ID, 'event-category', '', ', ','');
 										$btn_text = strip_tags($event_category);
 										$registration_link = get_post_meta($event->ID,'registration_link', true);

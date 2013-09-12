@@ -37,7 +37,8 @@ Template Name: Home Page
   									 $recurring_format = get_option('time_format');
 								 	}
 								   $post_object = get_post($event->ID);
-								   $description = $post_object->post_content;
+									setup_postdata($post_object);
+								   $description = get_the_excerpt();
 									$event_category =  get_the_term_list( $event->ID, 'event-category', '', ', ','');
 									$btn_text = strip_tags($event_category);
 						          printf(
@@ -62,7 +63,7 @@ Template Name: Home Page
 						  endif;
 						 ?>
 						<footer>
-							<a href="#"><?php the_field('events_&_classes_link'); ?></a> - <a href="#"><?php the_field('video_tutorials_link'); ?></a>
+							<a href="<?php echo home_url(); ?>/events-classes"><?php the_field('events_&_classes_link'); ?></a> <!-- - <a href="#"><?php the_field('video_tutorials_link'); ?></a> -->
 						</footer>
 					</section> <!-- end article section -->
 					
@@ -74,7 +75,7 @@ Template Name: Home Page
 							<?php the_field('about_our_classes_content'); ?>
 						</article>
 						<footer>
-							<a href="<?php echo home_url(); ?>/about"><?php the_field('about_our_teachers_link'); ?></a>
+							<!-- <a href="<?php echo home_url(); ?>/about"><?php the_field('about_our_teachers_link'); ?></a> -->
 							<span class="fine-print"><?php the_field('about_our_classes_fine_print'); ?></span>
 						</footer>
 					</section> <!-- end article section -->

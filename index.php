@@ -4,7 +4,7 @@
 
 				<div id="inner-content" class="wrap clearfix">
 
-						<div id="main" class="eightcol first clearfix" role="main">
+						<div id="main" class="clearfix" role="main">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -62,8 +62,6 @@
 							<?php endif; ?>
 
 						</div> <!-- end #main -->
-
-						<?php get_sidebar(); ?>
 
 				</div> <!-- end #inner-content -->
 

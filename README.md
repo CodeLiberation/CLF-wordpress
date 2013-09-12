@@ -13,3 +13,4 @@ If you need a free LESS compiler, use [SimpLESS](http://wearekiss.com/simpless).
 * Events Organiser
 * MailChimp Widget
 * Advanced Custom Fields
+* Advanced Excerpt
