@@ -23,7 +23,7 @@
 		<?php wp_footer(); ?>
 		<script>
 			var $ = jQuery;
-			$(".top-nav").find("li:nth-child(2)").addClass("current_page_item");
+			$(".top-nav").find("li:nth-child(1)").addClass("current_page_item");
 		</script>
 	</body>
 

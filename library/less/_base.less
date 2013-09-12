@@ -558,7 +558,7 @@ and more scalable.
 ******************************************************************/
 
 /* h3 comment title */
-#comments {
+#comments {border-top:1px dashed @blue; padding-top:40px;
 
 	/* number of comments span */
 	span {}
@@ -738,8 +738,9 @@ and more scalable.
 ******************************************************************/
 
 .respond-form {
-	margin: 1.5em 10px;
-	padding-bottom: 2.2em;
+	border-top:1px dashed @blue;
+	margin: 1.5em 10px 0;
+	padding: 40px 0 0;
 
 	form {
 		margin: 0.75em 0;
@@ -759,14 +760,6 @@ and more scalable.
 		input[type=email],
 		input[type=url],
 		textarea {
-			padding: 3px 6px;
-			background: #efefef;
-			border: 2px solid #cecece;
-			line-height: 1.5em;
-
-			&:focus {
-				background: #fff;
-			}
 
 			/* form validation */
 			&:invalid {
@@ -789,7 +782,7 @@ and more scalable.
 
 		textarea {
 			resize: none;
-			width: 97.3%;
+			width: 100%;
 			height: 150px;
 		}
 

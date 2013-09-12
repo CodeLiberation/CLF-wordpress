@@ -3420,6 +3420,8 @@ and more scalable.
 ******************************************************************/
 /* h3 comment title */
 #comments {
+  border-top: 1px dashed #5bc8e4;
+  padding-top: 40px;
   /* number of comments span */
 
 }
@@ -3532,8 +3534,9 @@ and more scalable.
 11. COMMENT FORM STYLES
 ******************************************************************/
 .respond-form {
-  margin: 1.5em 10px;
-  padding-bottom: 2.2em;
+  border-top: 1px dashed #5bc8e4;
+  margin: 1.5em 10px 0;
+  padding: 40px 0 0;
 }
 .respond-form form {
   margin: 0.75em 0;
@@ -3551,18 +3554,8 @@ and more scalable.
 .respond-form form input[type=email],
 .respond-form form input[type=url],
 .respond-form form textarea {
-  padding: 3px 6px;
-  background: #efefef;
-  border: 2px solid #cecece;
-  line-height: 1.5em;
   /* form validation */
 
-}
-.respond-form form input[type=text]:focus,
-.respond-form form input[type=email]:focus,
-.respond-form form input[type=url]:focus,
-.respond-form form textarea:focus {
-  background: #fff;
 }
 .respond-form form input[type=text]:invalid,
 .respond-form form input[type=email]:invalid,
@@ -3584,7 +3577,7 @@ and more scalable.
 }
 .respond-form form textarea {
   resize: none;
-  width: 97.3%;
+  width: 100%;
   height: 150px;
 }
 /* comment submit button */
