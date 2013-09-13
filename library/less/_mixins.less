@@ -97,7 +97,7 @@ TYPOGRAPHY
 @h3-size: 15px;
 @label-size: 24px;
 @p-size: 16px;
-@meta-size: 14px;
+@meta-size: @h3-size;
 @tiny-size: 12px;
 @normal-weight: 400;
 @light-weight: 400;
@@ -108,7 +108,8 @@ TYPOGRAPHY
     src: url('../fonts/bariol_regular.eot');
     src: url('../fonts/bariol_regular.eot?#iefix') format('embedded-opentype'),
          url('../fonts/bariol_regular.woff') format('woff'),
-         url('../fonts/bariol_regular.ttf') format('truetype');
+         url('../fonts/bariol_regular.ttf') format('truetype'),
+         url('../fonts/bariol_regular.svg#bariol_regularregular') format('svg');
 				 font-weight:@normal-weight;
 }
 
@@ -117,7 +118,8 @@ TYPOGRAPHY
     src: url('../fonts/bariol_light.eot');
     src: url('../fonts/bariol_light.eot?#iefix') format('embedded-opentype'),
          url('../fonts/bariol_light.woff') format('woff'),
-         url('../fonts/bariol_light.ttf') format('truetype');
+         url('../fonts/bariol_light.ttf') format('truetype'),
+         url('../fonts/bariol_light.svg#bariol_lightlight') format('svg');
 		     font-weight:100;
 }
 
@@ -126,7 +128,8 @@ TYPOGRAPHY
     src: url('../fonts/bariol_bold.eot');
     src: url('../fonts/bariol_bold.eot?#iefix') format('embedded-opentype'),
          url('../fonts/bariol_bold.woff') format('woff'),
-         url('../fonts/bariol_bold.ttf') format('truetype');
+         url('../fonts/bariol_bold.ttf') format('truetype'),
+         url('../fonts/bariol_bold.svg#bariol_boldbold') format('svg');
 		     font-weight:@bold-weight;
 }
 

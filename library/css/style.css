@@ -557,19 +557,19 @@ TYPOGRAPHY
 @font-face {
   font-family: 'Bariol';
   src: url('../fonts/bariol_regular.eot');
-  src: url('../fonts/bariol_regular.eot?#iefix') format('embedded-opentype'), url('../fonts/bariol_regular.woff') format('woff'), url('../fonts/bariol_regular.ttf') format('truetype');
+  src: url('../fonts/bariol_regular.eot?#iefix') format('embedded-opentype'), url('../fonts/bariol_regular.woff') format('woff'), url('../fonts/bariol_regular.ttf') format('truetype'), url('../fonts/bariol_regular.svg#bariol_regularregular') format('svg');
   font-weight: 400;
 }
 @font-face {
   font-family: 'Bariol';
   src: url('../fonts/bariol_light.eot');
-  src: url('../fonts/bariol_light.eot?#iefix') format('embedded-opentype'), url('../fonts/bariol_light.woff') format('woff'), url('../fonts/bariol_light.ttf') format('truetype');
+  src: url('../fonts/bariol_light.eot?#iefix') format('embedded-opentype'), url('../fonts/bariol_light.woff') format('woff'), url('../fonts/bariol_light.ttf') format('truetype'), url('../fonts/bariol_light.svg#bariol_lightlight') format('svg');
   font-weight: 100;
 }
 @font-face {
   font-family: 'Bariol';
   src: url('../fonts/bariol_bold.eot');
-  src: url('../fonts/bariol_bold.eot?#iefix') format('embedded-opentype'), url('../fonts/bariol_bold.woff') format('woff'), url('../fonts/bariol_bold.ttf') format('truetype');
+  src: url('../fonts/bariol_bold.eot?#iefix') format('embedded-opentype'), url('../fonts/bariol_bold.woff') format('woff'), url('../fonts/bariol_bold.ttf') format('truetype'), url('../fonts/bariol_bold.svg#bariol_boldbold') format('svg');
   font-weight: bold;
 }
 /*
@@ -3847,6 +3847,7 @@ textarea:focus {
 }
 .home #content .entry-content.events-classes .events-classes-list li .event-info .event-desc {
   margin: 10px 0 20px;
+  line-height: 18px;
 }
 .home #content .entry-content.events-classes .events-classes-list li .event-info .event-desc strong {
   text-transform: uppercase;
@@ -4792,7 +4793,7 @@ you can add resource intensive styles.
     margin: 0 3% 0 0;
   }
   .home #content .entry-content.events-classes .events-classes-list li .event-info {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 16px;
   }
   .home #content .entry-content.events-classes .events-classes-list li .event-info .button {
