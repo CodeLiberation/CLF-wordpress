@@ -51,23 +51,24 @@ if(isset($_POST['submitted'])) {
 
 } ?>
 
-<?php get_header('contact'); ?>
+<?php get_header(); ?>
 
 <div id="content">
-     <div id="about-content-top">
-        We can answer general questions as well as inquiries about classes, events, tutoring and workshops.
-     </div>
+	<div id="inner-content" class="wrap clearfix contact-us">
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<section class="hero">
+				<?php the_content(); ?>
+			</section>
+		<?php endwhile; endif; ?>
+        
 
      <div id="contact-form">
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
             <?php if(isset($emailSent) && $emailSent == true) { ?>
                 <div id="email-success">
                     Thanks, your email was sent successfully.
                 </div>
             <?php } else { ?>
 
-                <?php the_post() ?>
                     <div class="entry-content">
                         <form action="<?php the_permalink(); ?>" id="contactForm" method="post">
                             <ul>
@@ -88,14 +89,13 @@ if(isset($_POST['submitted'])) {
                                     <textarea name="comments" id="commentsText" rows="7" cols="55"></textarea>
                                 </li>
                                 <li>
-                                    <button type="submit">Send us your message!</button>
+                                    <button type="submit" class="button">Send us your message!</button>
                                 </li>
                             </ul>
                             <input type="hidden" name="submitted" id="submitted" value="true" />
                         </form>
                     </div>
             <?php } ?>
-        <?php endwhile; endif; ?>
     </div><!-- #content -->
 </div>
 
