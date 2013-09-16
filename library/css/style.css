@@ -3690,6 +3690,11 @@ textarea:focus {
   color: #000000;
   background: #ececec;
 }
+label {
+  font-size: 24px;
+  text-transform: lowercase;
+  color: #666666;
+}
 .home #container {
   padding: 0;
 }
@@ -4293,6 +4298,24 @@ textarea:focus {
 }
 #inner-content.events-classes .article-header.event-header .event-entry-meta .event-time {
   color: #ed408c;
+}
+#inner-content.contact-us #contact-form.hero {
+  zoom: 1;
+  margin-bottom: 0;
+  border: 0;
+  padding-bottom: 0;
+}
+#inner-content.contact-us #contact-form.hero:before,
+#inner-content.contact-us #contact-form.hero:after {
+  content: "";
+  display: table;
+}
+#inner-content.contact-us #contact-form.hero:after {
+  clear: both;
+}
+#inner-content.contact-us #contact-form.hero label {
+  margin-top: 10px;
+  display: block;
 }
 /*
 SMALLER MOBILE DEVICES

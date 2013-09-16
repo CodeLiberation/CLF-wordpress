@@ -62,7 +62,7 @@ if(isset($_POST['submitted'])) {
 		<?php endwhile; endif; ?>
         
 
-     <div id="contact-form">
+     <div id="contact-form" class="hero">
             <?php if(isset($emailSent) && $emailSent == true) { ?>
                 <div id="email-success">
                     Thanks, your email was sent successfully.
@@ -73,20 +73,20 @@ if(isset($_POST['submitted'])) {
                         <form action="<?php the_permalink(); ?>" id="contactForm" method="post">
                             <ul>
                                 <li>
-                                    <label for="contactName">Name:</label>
-                                    <input type="text" name="contactName" id="contactName" value="" />
+                                    <label for="contactName">Name</label>
+                                    <input type="text" name="contactName" id="contactName" value="" placeholder="enter your first and last name" />
                                 </li>
                                 <li>
-                                    <label for="email">Email</label>
-                                    <input type="text" name="email" id="email" value=""/>
+                                    <label for="email">Email address</label>
+                                    <input type="text" name="email" id="email" value="" placeholder="email@address.com" />
                                 </li>
                                 <li>
                                     <label for="subject">Subject</label>
-                                    <input type="text" name="subject" id="subject" value=""/>
+                                    <input type="text" name="subject" id="subject" value="" placeholder="enter a subject here" />
                                 </li>
                                 <li>
-                                    <label for="commentsText">Message:</label>
-                                    <textarea name="comments" id="commentsText" rows="7" cols="55"></textarea>
+                                    <label for="commentsText">Message</label>
+                                    <textarea name="comments" id="commentsText" rows="7" cols="55" placeholder="enter your message" ></textarea>
                                 </li>
                                 <li>
                                     <button type="submit" class="button">Send us your message!</button>
