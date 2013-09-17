@@ -74,19 +74,31 @@ if(isset($_POST['submitted'])) {
                             <ul>
                                 <li>
                                     <label for="contactName">Name</label>
-                                    <input type="text" name="contactName" id="contactName" value="" placeholder="enter your first and last name" />
+                                    <input type="text" name="contactName" id="contactName" value="<?php echo $fullName; ?>" placeholder="enter your first and last name" />
+												<?php if ($nameError) {
+												echo '<p class="alert-error">'.$nameError.'</p>';
+												}
+												?>
                                 </li>
                                 <li>
                                     <label for="email">Email address</label>
-                                    <input type="text" name="email" id="email" value="" placeholder="email@address.com" />
+                                    <input type="text" name="email" id="email" value="<?php echo $email; ?>" placeholder="email@address.com" />
+												<?php if ($emailError) {
+												echo '<p class="alert-error">'.$emailError.'</p>';
+												}
+												?>
                                 </li>
                                 <li>
                                     <label for="subject">Subject</label>
-                                    <input type="text" name="subject" id="subject" value="" placeholder="enter a subject here" />
+                                    <input type="text" name="subject" id="subject" value="<?php echo $_POST['subject']; ?>" placeholder="enter a subject here" />
                                 </li>
                                 <li>
                                     <label for="commentsText">Message</label>
-                                    <textarea name="comments" id="commentsText" rows="7" cols="55" placeholder="enter your message" ></textarea>
+                                    <textarea name="comments" id="commentsText" rows="7" cols="55" placeholder="enter your message"><?php echo $comments; ?></textarea>
+												<?php if ($commentError) {
+												echo '<p class="alert-error">'.$commentError.'</p>';
+												}
+												?>
                                 </li>
                                 <li>
                                     <button type="submit" class="button">Send us your message!</button>

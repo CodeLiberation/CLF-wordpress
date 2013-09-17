@@ -21,7 +21,13 @@
 
 		<!-- all js scripts are loaded in library/bones.php -->
 		<?php wp_footer(); ?>
-
+      <?php if( is_page('contact') ){ ?>
+		<script>
+			var $ = jQuery;
+		</script>
+      <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/js/jquery.validate.min.js"></script>
+      <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/js/verif.js"></script>
+      <?php }?>
 	</body>
 
 </html> <!-- end page. what a ride! -->

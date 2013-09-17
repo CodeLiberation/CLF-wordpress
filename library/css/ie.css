@@ -2333,33 +2333,33 @@ span.amp {
   right: 0;
 }
 .alert {
-  margin: 10px;
+  margin: 10px 0;
   padding: 5px 18px;
   border: 1px solid;
 }
 .alert-help {
-  margin: 10px;
+  margin: 10px 0;
   padding: 5px 18px;
   border: 1px solid;
   border-color: #e8dc59;
   background: #ebe16f;
 }
 .alert-info {
-  margin: 10px;
+  margin: 10px 0;
   padding: 5px 18px;
   border: 1px solid;
   border-color: #bfe4f4;
   background: #d5edf8;
 }
 .alert-error {
-  margin: 10px;
+  margin: 10px 0;
   padding: 5px 18px;
   border: 1px solid;
   border-color: #f8cdce;
   background: #fbe3e4;
 }
 .alert-success {
-  margin: 10px;
+  margin: 10px 0;
   padding: 5px 18px;
   border: 1px solid;
   border-color: #deeaae;
