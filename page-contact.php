@@ -10,7 +10,7 @@ if(isset($_POST['submitted'])) {
         $nameError = 'Please enter your name.';
         $hasError = true;
     } else {
-        $name = trim($_POST['contactName']);
+        $fullName = trim($_POST['contactName']);
     }
 
     if(trim($_POST['email']) === '')  {
@@ -42,8 +42,8 @@ if(isset($_POST['submitted'])) {
             $emailTo = 'hello@codeliberation.org';
         }
         $subject = 'Contact Form Submission: '.$subject;
-        $body = "Name: $name \n\nEmail: $email \n\n$subject \n\nComments: $comments";
-        $headers = 'From: '.$name.' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
+        $body = "Name: $fullName \n\nEmail: $email \n\n$subject \n\nComments: $comments";
+        $headers = 'From: '.$fullName.' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
 
         wp_mail($emailTo, $subject, $body, $headers);
         $emailSent = true;
