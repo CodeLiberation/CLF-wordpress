@@ -6,7 +6,6 @@
 	}
 	.mailing-list {border:0; padding:0;
 		.widget{padding:0; margin:0;}
-		.widgettitle {color:@gray; font-size:@label-size; font-weight:@light-weight; border-bottom:0; margin:0 0 20px;}
 		label {display:none !important;}
 		.error {color:@pink; margin:0 0 10px;}
 	}
@@ -24,7 +23,7 @@
 					li {background:@white; .border-radius; margin:0 0 20px; .transition(none);
 						&:last-child {margin:0;}
 						h3 {font-size:@h2-size; line-height:@h2-size; margin:0; font-weight:@normal-weight; border-bottom:1px solid @lighter-gray;
-							a {color:@blue; padding:36px 15px; display:block; text-align:center;
+							a {color:@blue; padding:36px 15px; display:block; text-align:center; border:0;
 								&:hover {background:@blue; color:white; .border-radius(12px 12px 0 0);}
 								&:active {background:darken(@blue,10%);}
 							}
@@ -142,7 +141,7 @@
 			}
 			.entry-content .article-header.index-hero, .area-content, footer {max-width:1200px; margin:30px auto 0;}
 			footer {font-size:@label-size; line-height:@label-size; text-transform:lowercase; .clearfix;
-				a {text-decoration:none; border-bottom:1px solid;}
+				a {text-decoration:none;}
 				.fine-print {display:block; margin:20px 0 0;}
 			}
 		}

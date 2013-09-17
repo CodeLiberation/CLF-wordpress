@@ -3066,11 +3066,20 @@ body {
   margin-right: 10px;
   margin-bottom: 8px;
 }
+.hero h4 {
+  color: #666666;
+  font-size: 24px;
+  font-weight: 400;
+  border-bottom: 0;
+  margin: 0 0 20px;
+}
 /*********************
 04. LINK STYLES
 *********************/
 a,
 a:visited {
+  text-decoration: none;
+  border-bottom: 1px solid #f48cba;
   color: #ed408c;
   /* on hover */
 
@@ -3119,18 +3128,6 @@ h5,
   /* removing text decoration from all headline links */
 
 }
-h1 a,
-.h1 a,
-h2 a,
-.h2 a,
-h3 a,
-.h3 a,
-h4 a,
-.h4 a,
-h5 a,
-.h5 a {
-  text-decoration: none;
-}
 h1,
 .h1 {
   font-size: 2.5em;
@@ -3165,6 +3162,7 @@ h5,
   margin: 75px 0 25px;
 }
 .header #logo a {
+  border: 0;
   font-size: 0;
   background: url(../images/logo.png) no-repeat;
   width: 206px;
@@ -3271,6 +3269,13 @@ and more scalable.
   vertical-align: bottom;
   margin-right: 10px;
   margin-bottom: 8px;
+}
+#content #inner-content h4 {
+  color: #666666;
+  font-size: 24px;
+  font-weight: 400;
+  border-bottom: 0;
+  margin: 0 0 20px;
 }
 #content hr {
   border: 1px solid #e6e6e6;
@@ -3641,6 +3646,7 @@ and more scalable.
   background: none;
   font-size: 24px;
   color: #5bc8e4;
+  border: 0;
 }
 .footer nav ul.nav li:last-child {
   margin-right: 0;
@@ -3708,13 +3714,6 @@ label {
 .home .mailing-list .widget {
   padding: 0;
   margin: 0;
-}
-.home .mailing-list .widgettitle {
-  color: #666666;
-  font-size: 24px;
-  font-weight: 400;
-  border-bottom: 0;
-  margin: 0 0 20px;
 }
 .home .mailing-list label {
   display: none !important;
@@ -3809,6 +3808,7 @@ label {
   padding: 36px 15px;
   display: block;
   text-align: center;
+  border: 0;
 }
 .home #content .entry-content.events-classes .events-classes-list li h3 a:hover {
   background: #5bc8e4;
@@ -4142,7 +4142,6 @@ label {
 }
 .home #content .entry-content footer a {
   text-decoration: none;
-  border-bottom: 1px solid;
 }
 .home #content .entry-content footer .fine-print {
   display: block;
@@ -4236,6 +4235,7 @@ label {
 #inner-content.events-classes .events-classes-list .event-title a {
   color: #5bc8e4;
   display: block;
+  border: 0;
 }
 #inner-content.events-classes .events-classes-list .event-date,
 #inner-content.events-classes .events-classes-list .event-time {
@@ -4619,7 +4619,6 @@ you can add resource intensive styles.
     display: inline-block;
     text-decoration: none;
     color: #ed408c;
-    border-bottom: 1px solid #f48cba;
     padding: 0;
   }
   .header nav ul.nav li a:hover,
@@ -4681,7 +4680,7 @@ you can add resource intensive styles.
     border-right: 0;
     display: block;
     width: 180px;
-    border-bottom: 1px solid #ccc;
+    border-bottom-color: #adadad;
   }
   .header .inner-header .nav ul.sub-menu li:last-child a,
   .header .inner-header .nav ul.children li:last-child a {

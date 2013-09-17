@@ -65,7 +65,7 @@ if(isset($_POST['submitted'])) {
      <div id="contact-form" class="hero">
             <?php if(isset($emailSent) && $emailSent == true) { ?>
                 <div id="email-success">
-                    Thanks, your email was sent successfully.
+                    <h4>Thanks, your email was sent successfully.</h4>
                 </div>
             <?php } else { ?>
 
