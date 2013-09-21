@@ -7,7 +7,7 @@
 	.mailing-list {border:0; padding:0;
 		.widget{padding:0; margin:0;}
 		label {display:none !important;}
-		.error {color:@pink; margin:0 0 10px;}
+		.error {color:@pink; .text-stroke(@pink); margin:0 0 10px;}
 	}
 	#content {
 		#inner-content {margin:0;
@@ -15,7 +15,7 @@
 		}
 		.entry-content {padding:45px; .clearfix;
 			.article-header.index-hero {max-width:1200px; margin:0 auto;
-				h2 {font-size:@h2-size; line-height:@h2-size; margin:0 0 30px; color:@white; font-weight:@normal-weight;}
+				h2 {font-size:@h2-size; line-height:@h2-size; margin:0 0 30px; color:@white; .text-stroke(@white); font-weight:@normal-weight;}
 			}
 			.area-content {.clearfix;}
 			&.events-classes {background:@pink; 
@@ -23,7 +23,7 @@
 					li {background:@white; .border-radius; margin:0 0 20px; .transition(none);
 						&:last-child {margin:0;}
 						h3 {font-size:@h2-size; line-height:@h2-size; margin:0; font-weight:@normal-weight; border-bottom:1px solid @lighter-gray;
-							a {color:@blue; padding:36px 15px; display:block; text-align:center; border:0;
+							a {color:@blue; .text-stroke(@blue); padding:36px 15px; display:block; text-align:center; border:0;
 								&:hover {background:@blue; color:white; .border-radius(12px 12px 0 0);}
 								&:active {background:darken(@blue,10%);}
 							}
@@ -31,7 +31,7 @@
 						.event-info {background:@lightest-gray; .border-radius(0 0 12px 12px); padding:25px 18px; font-size:@p-size; line-height:@p-size; .clearfix;
 							.event-date, .event-time {text-transform:uppercase; display:block;}
 							.event-date {color:@gray; margin-bottom:3px;}
-							.event-time {color:@pink;}
+							.event-time {color:@pink; .text-stroke(@pink);}
 							.event-desc {margin:10px 0 20px; line-height:18px;
 								strong {text-transform:uppercase; color:@pink;}
 							}

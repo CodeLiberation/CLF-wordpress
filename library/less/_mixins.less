@@ -296,6 +296,9 @@ USAGE: .border-radius(4px);
           box-sizing: @boxsizing;
 }
 
+.text-stroke(@strokecolor:@black) {
+	-webkit-text-stroke:1px fade(@strokecolor,10%);
+}
 
 /*********************
 TRANISTION
@@ -352,6 +355,7 @@ BUTTONS
 	border:0;
 	padding: 15px 30px;
 	color: @white;
+	.text-stroke(@white);
 	display: inline-block;
 	font-size: @label-size;
 	font-family:@sans-serif;
@@ -367,6 +371,7 @@ BUTTONS
 
 	&:hover, &:focus {
 		color: @white;
+		.text-stroke(@white);
 		background:lighten(@blue,10%);
 	}
 	

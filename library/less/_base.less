@@ -42,6 +42,7 @@ body {
 	font-size: @p-size;
 	line-height: 1.5;
 	color: @black;
+	.text-stroke(@black);
 }
 
 /********************
@@ -221,6 +222,7 @@ and more scalable.
 			text-decoration: none;
 			
 			color:@pink;
+			.text-stroke(@pink);
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -856,7 +858,7 @@ and more scalable.
 	nav {
 		ul.nav {background:none; margin:0 0 5px;
 			li {float:none; display:inline-block; margin:0 10px 0 0;
-				a {font-family:@social-icon; .ss-icon; background:none; font-size:@label-size; color:@blue; border:0;}
+				a {font-family:@social-icon; .ss-icon; background:none; font-size:@label-size; color:@blue; .text-stroke(@blue); border:0;}
 
 				&:first-child {}
 

@@ -7,9 +7,9 @@
 		}
 		.event-date, .event-time {text-transform:uppercase; font-size:@tiny-size; line-height:@tiny-size; vertical-align:bottom;}
 		.event-date {color:@gray;}
-		.event-time {color:@pink;}
+		.event-time {color:@pink; .text-stroke(@pink);}
 		.event-desc {padding:20px 20px 0;
-			strong {text-transform:uppercase; color:@pink;}
+			strong {text-transform:uppercase; color:@pink; .text-stroke(@pink);}
 			.eo-event-meta {margin:0;
 				li {margin:0; padding:0;}
 				+ p {margin-top:0;}
@@ -21,7 +21,7 @@
 		.event-title {border-bottom:1px solid @lighter-gray; padding:0 0 2px;}
 		.event-entry-meta {text-transform:uppercase; font-size:@p-size; line-height:@p-size; margin:15px 0 0;
 			.event-date {color:@gray;}
-			.event-time {color:@pink;}
+			.event-time {color:@pink; .text-stroke(@pink);}
 		}
 	}
 

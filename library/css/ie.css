@@ -2399,6 +2399,7 @@ BUTTONS
   border: 0;
   padding: 15px 30px;
   color: #ffffff;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
   display: inline-block;
   font-size: 24px;
   font-family: "Bariol", Helvetica, Arial, sans-serif;
@@ -2423,6 +2424,7 @@ BUTTONS
 .button:focus,
 .button:visited:focus {
   color: #ffffff;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
   background: #87d7eb;
 }
 .button:active,
@@ -2684,6 +2686,7 @@ NAVIGATION STYLES
   display: inline-block;
   text-decoration: none;
   color: #ed408c;
+  -webkit-text-stroke: 1px rgba(237, 64, 140, 0.1);
   padding: 0;
 }
 .header nav ul.nav li a:hover,
