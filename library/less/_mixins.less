@@ -97,9 +97,9 @@ TYPOGRAPHY
 @h2-size: 36px;
 @h3-size: 15px;
 @label-size: 24px;
-@p-size: 16px;
+@p-size: 17px;
 @meta-size: @h3-size;
-@tiny-size: 12px;
+@tiny-size: 15px;
 @normal-weight: 400;
 @light-weight: 400;
 @bold-weight: bold;
@@ -108,9 +108,9 @@ TYPOGRAPHY
     font-family: 'Bariol';
     src: url('../fonts/bariol_regular.eot');
     src: url('../fonts/bariol_regular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/bariol_regular.svg#Bariol') format('svg'),
          url('../fonts/bariol_regular.woff') format('woff'),
-         url('../fonts/bariol_regular.ttf') format('truetype');
+         url('../fonts/bariol_regular.ttf') format('truetype'),
+		     url('../fonts/bariol_regular.svg#Bariol') format('svg');
 				 font-weight:@normal-weight;
 }
 
@@ -118,9 +118,9 @@ TYPOGRAPHY
     font-family: 'Bariol';
     src: url('../fonts/bariol_light.eot');
     src: url('../fonts/bariol_light.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/bariol_light.svg#Bariol') format('svg'),
          url('../fonts/bariol_light.woff') format('woff'),
-         url('../fonts/bariol_light.ttf') format('truetype');
+         url('../fonts/bariol_light.ttf') format('truetype'),
+		     url('../fonts/bariol_light.svg#Bariol') format('svg');
 		     font-weight:100;
 }
 
@@ -128,10 +128,24 @@ TYPOGRAPHY
     font-family: 'Bariol';
     src: url('../fonts/bariol_bold.eot');
     src: url('../fonts/bariol_bold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/bariol_bold.svg#Bariol') format('svg'),
          url('../fonts/bariol_bold.woff') format('woff'),
-         url('../fonts/bariol_bold.ttf') format('truetype');
+         url('../fonts/bariol_bold.ttf') format('truetype'),
+		     url('../fonts/bariol_bold.svg#Bariol') format('svg');
 		     font-weight:@bold-weight;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+	    font-family: 'Bariol';
+	    src: url('../fonts/bariol_regular.woff') format('woff');
+		 font-weight:@normal-weight;
+	}
+	@font-face {
+	    font-family: 'Bariol';
+	    src: url('../fonts/bariol_bold.woff') format('woff');
+     font-weight:@bold-weight;
+	}
+    
 }
 
 /*
@@ -297,7 +311,9 @@ USAGE: .border-radius(4px);
 }
 
 .text-stroke(@strokecolor:@black) {
-	-webkit-text-stroke:1px fade(@strokecolor,10%);
+	text-shadow:0 0 1px fade(@strokecolor,10%);
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
 }
 
 /*********************

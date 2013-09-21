@@ -77,20 +77,32 @@ TYPOGRAPHY
 @font-face {
   font-family: 'Bariol';
   src: url('../fonts/bariol_regular.eot');
-  src: url('../fonts/bariol_regular.eot?#iefix') format('embedded-opentype'), url('../fonts/bariol_regular.svg#Bariol') format('svg'), url('../fonts/bariol_regular.woff') format('woff'), url('../fonts/bariol_regular.ttf') format('truetype');
+  src: url('../fonts/bariol_regular.eot?#iefix') format('embedded-opentype'), url('../fonts/bariol_regular.woff') format('woff'), url('../fonts/bariol_regular.ttf') format('truetype'), url('../fonts/bariol_regular.svg#Bariol') format('svg');
   font-weight: 400;
 }
 @font-face {
   font-family: 'Bariol';
   src: url('../fonts/bariol_light.eot');
-  src: url('../fonts/bariol_light.eot?#iefix') format('embedded-opentype'), url('../fonts/bariol_light.svg#Bariol') format('svg'), url('../fonts/bariol_light.woff') format('woff'), url('../fonts/bariol_light.ttf') format('truetype');
+  src: url('../fonts/bariol_light.eot?#iefix') format('embedded-opentype'), url('../fonts/bariol_light.woff') format('woff'), url('../fonts/bariol_light.ttf') format('truetype'), url('../fonts/bariol_light.svg#Bariol') format('svg');
   font-weight: 100;
 }
 @font-face {
   font-family: 'Bariol';
   src: url('../fonts/bariol_bold.eot');
-  src: url('../fonts/bariol_bold.eot?#iefix') format('embedded-opentype'), url('../fonts/bariol_bold.svg#Bariol') format('svg'), url('../fonts/bariol_bold.woff') format('woff'), url('../fonts/bariol_bold.ttf') format('truetype');
+  src: url('../fonts/bariol_bold.eot?#iefix') format('embedded-opentype'), url('../fonts/bariol_bold.woff') format('woff'), url('../fonts/bariol_bold.ttf') format('truetype'), url('../fonts/bariol_bold.svg#Bariol') format('svg');
   font-weight: bold;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'Bariol';
+    src: url('../fonts/bariol_regular.woff') format('woff');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Bariol';
+    src: url('../fonts/bariol_bold.woff') format('woff');
+    font-weight: bold;
+  }
 }
 /*
 * Symbolset
@@ -2399,7 +2411,9 @@ BUTTONS
   border: 0;
   padding: 15px 30px;
   color: #ffffff;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   display: inline-block;
   font-size: 24px;
   font-family: "Bariol", Helvetica, Arial, sans-serif;
@@ -2424,7 +2438,9 @@ BUTTONS
 .button:focus,
 .button:visited:focus {
   color: #ffffff;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   background: #87d7eb;
 }
 .button:active,
@@ -2686,7 +2702,9 @@ NAVIGATION STYLES
   display: inline-block;
   text-decoration: none;
   color: #ed408c;
-  -webkit-text-stroke: 1px rgba(237, 64, 140, 0.1);
+  text-shadow: 0 0 1px rgba(237, 64, 140, 0.1);
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   padding: 0;
 }
 .header nav ul.nav li a:hover,
@@ -2876,7 +2894,7 @@ be seen on the Desktop.
 }
 .home #content .entry-content.events-classes .events-classes-list li .event-info {
   font-size: 15px;
-  line-height: 16px;
+  line-height: 17px;
 }
 .home #content .entry-content.events-classes .events-classes-list li .event-info .button {
   float: none;
