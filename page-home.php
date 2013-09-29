@@ -81,7 +81,14 @@ Template Name: Home Page
 							<?php the_field('about_our_classes_content'); ?>
 						</article>
 						<footer>
-							<!-- <a href="<?php echo home_url(); ?>/about"><?php the_field('about_our_teachers_link'); ?></a> -->
+							<ul>
+								<li>
+									<a href="<?php echo home_url(); ?>/about"><?php the_field('about_our_teachers_link'); ?></a>
+								</li>
+								<li>
+									<a href="<?php echo home_url(); ?>/blog"><?php the_field('blog_link'); ?></a>
+								</li>
+							</ul>
 							<span class="fine-print"><?php the_field('about_our_classes_fine_print'); ?></span>
 						</footer>
 					</section> <!-- end article section -->

@@ -368,7 +368,7 @@ function modify_contact_methods($profile_fields) {
 
 	// Add new fields
 	$profile_fields['twitter'] = 'Twitter Username';
-
+	
 	return $profile_fields;
 }
 add_filter('user_contactmethods', 'modify_contact_methods');

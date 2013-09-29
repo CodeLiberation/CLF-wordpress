@@ -28,7 +28,7 @@ Template Name: About
 			$curauth = get_userdata($author->ID);
 
 		// If user level is above 0 or login name is "admin", display profile
-			if($curauth->user_level > 0 || $curauth->user_login == 'admin') :
+			if($curauth->user_level > 5 && $curauth->user_level < 8) :
 
 			// Get link to author page
 				$user_link = get_author_posts_url($curauth->ID);

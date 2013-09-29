@@ -3129,6 +3129,10 @@ a.user-avatar,
 a:visited.user-avatar {
   border: 0;
 }
+a.small-link,
+a:visited.small-link {
+  font-size: 17px;
+}
 /******************************************************************
 05. H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
@@ -4101,6 +4105,19 @@ input[type="submit"]:active {
 .home #content .entry-content.about footer a:hover {
   color: #4496ab;
 }
+.home #content .entry-content.about footer ul {
+  display: inline;
+}
+.home #content .entry-content.about footer li {
+  display: inline;
+}
+.home #content .entry-content.about footer li:after {
+  content: "-";
+  margin-left: 5px;
+}
+.home #content .entry-content.about footer li:last-child:after {
+  content: "";
+}
 .home #content .entry-content.social-media {
   background: #666666;
 }
@@ -4144,6 +4161,9 @@ input[type="submit"]:active {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
+}
+.home #content .entry-content.social-media .area-content .imgdisplay > a {
+  display: none;
 }
 .home #content .entry-content.social-media .area-content .imgdisplay .tweettxts {
   margin: 0;

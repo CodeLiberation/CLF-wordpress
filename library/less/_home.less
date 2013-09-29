@@ -91,6 +91,13 @@
 					a {color:@darker-blue; border-bottom-color:@dark-blue;
 						&:hover {color:@dark-blue;}
 					}
+					ul {display:inline;}
+					li {display:inline;
+						&:after {content:"-"; margin-left:5px;}
+						&:last-child {
+							&:after {content:""}
+						}
+					}
 				}
 			}
 			&.social-media {background:@gray;
@@ -101,6 +108,7 @@
 					}
 					.aiwidget-title {display:none;}
 					.imgdisplay {height:145px; margin:0 0 25px 0; background:@lightest-gray; .border-radius; .box-sizing; position:relative;
+						> a {display:none;}
 						.tweettxts {margin:0; color:@gray; position:absolute; display:table; width:100%; height:100%; left:0; top:0; padding:12px;}
 						.tweettext {display:table-cell; vertical-align:middle; font-size:@h3-size; line-height:18px;
 							a {border-bottom:1px solid @light-gray; color:@gray;

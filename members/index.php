@@ -12,13 +12,18 @@ get_header( 'buddypress' ); ?>
 	<?php do_action( 'bp_before_directory_members_page' ); ?>
 
 	<div id="content">
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<section class="hero">
+				<?php the_content(); ?>
+			</section>
+		<?php endwhile; endif; ?>
 		<div id="inner-content" class="wrap clearfix profile">
 
 		<?php do_action( 'bp_before_directory_members' ); ?>
 
 		<form action="" method="post" id="members-directory-form" class="dir-form">
 
-			<h3><?php _e( 'Members Directory', 'buddypress' ); ?></h3>
+			<h2><?php _e( 'Members Directory', 'buddypress' ); ?> <a class="small-link" href="<?php echo trailingslashit( bp_get_root_domain() . '/' . bp_get_members_root_slug() ); ?>"><?php printf( __( 'All Members <span>%s</span>', 'buddypress' ), bp_get_total_member_count() ); ?></a></h2>
 
 			<?php do_action( 'bp_before_directory_members_content' ); ?>
 
@@ -32,8 +37,6 @@ get_header( 'buddypress' ); ?>
 
 			<div class="item-list-tabs" role="navigation">
 				<ul>
-					<li class="selected" id="members-all"><a href="<?php echo trailingslashit( bp_get_root_domain() . '/' . bp_get_members_root_slug() ); ?>"><?php printf( __( 'All Members <span>%s</span>', 'buddypress' ), bp_get_total_member_count() ); ?></a></li>
-
 					<?php if ( is_user_logged_in() && bp_is_active( 'friends' ) && bp_get_total_friend_count( bp_loggedin_user_id() ) ) : ?>
 
 						<li id="members-personal"><a href="<?php echo bp_loggedin_user_domain() . bp_get_friends_slug() . '/my-friends/' ?>"><?php printf( __( 'My Friends <span>%s</span>', 'buddypress' ), bp_get_total_friend_count( bp_loggedin_user_id() ) ); ?></a></li>
