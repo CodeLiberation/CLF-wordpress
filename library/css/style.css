@@ -3741,6 +3741,44 @@ label {
   border-color: #f8cdce;
   background: #fbe3e4;
 }
+input[type="submit"] {
+  background: #5bc8e4;
+  border: 0;
+  padding: 15px 30px;
+  color: #ffffff;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  display: inline-block;
+  font-size: 24px;
+  font-family: "Bariol", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: lowercase;
+  cursor: pointer;
+  margin-top: 12px;
+  line-height: 21px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  float: right;
+}
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  color: #ffffff;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  background: #87d7eb;
+}
+input[type="submit"]:active {
+  background: #2fb9dd;
+}
 .home #container {
   padding: 0;
 }
@@ -4429,6 +4467,13 @@ label {
 }
 #inner-content.profile .item-list-tabs ul li:last-child:after {
   content: "";
+}
+#inner-content.profile .item-list-tabs ul li a span {
+  background: #facce0;
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 100px;
+  font-size: 11px;
 }
 /*
 SMALLER MOBILE DEVICES

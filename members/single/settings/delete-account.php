@@ -11,7 +11,7 @@
 <?php get_header( 'buddypress' ); ?>
 
 	<div id="content">
-		<div class="padder">
+		<div id="inner-content" class="wrap clearfix profile">
 
 			<?php do_action( 'bp_before_member_settings_template' ); ?>
 
