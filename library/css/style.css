@@ -3125,6 +3125,10 @@ a:visited:link {
 
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
 }
+a.user-avatar,
+a:visited.user-avatar {
+  border: 0;
+}
 /******************************************************************
 05. H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
@@ -3695,6 +3699,7 @@ input[type=email],
 input[type=number],
 input[type=phone],
 input[type=url],
+input[type=password],
 textarea {
   background: #e6e6e6;
   border: 0;
@@ -3717,6 +3722,7 @@ input[type=email]:focus,
 input[type=number]:focus,
 input[type=phone]:focus,
 input[type=url]:focus,
+input[type=password]:focus,
 textarea:focus {
   outline: none;
   color: #000000;
@@ -3726,6 +3732,14 @@ label {
   font-size: 24px;
   text-transform: lowercase;
   color: #666666;
+  display: block;
+}
+.error {
+  margin: 10px 0;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #f8cdce;
+  background: #fbe3e4;
 }
 .home #container {
   padding: 0;
@@ -4366,6 +4380,55 @@ label {
 #inner-content.contact-us #contact-form.hero label {
   margin-top: 10px;
   display: block;
+}
+#inner-content.profile .user-avatar {
+  display: block;
+  float: left;
+  width: 25%;
+  padding: 0 25px 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#inner-content.profile .user-avatar img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#inner-content.profile .user-info {
+  float: left;
+  width: 75%;
+}
+#inner-content.profile .user-name {
+  font-weight: bold;
+  margin: 0 0 15px;
+  border-bottom: 1px solid #e6e6e6;
+  color: #5bc8e4;
+  text-shadow: 0 0 1px rgba(91, 200, 228, 0.1);
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+#inner-content.profile .user-name a {
+  border: 0;
+  color: #5bc8e4;
+}
+#inner-content.profile .user-name a.twitter {
+  font-size: 15px;
+  border-bottom: 1px solid #f48cba;
+  vertical-align: bottom;
+}
+#inner-content.profile .item-list-tabs ul li {
+  display: inline-block;
+  margin: 0;
+}
+#inner-content.profile .item-list-tabs ul li:after {
+  content: "-";
+  color: #adadad;
+  display: inline-block;
+  margin: 0 5px 0 5px;
+}
+#inner-content.profile .item-list-tabs ul li:last-child:after {
+  content: "";
 }
 /*
 SMALLER MOBILE DEVICES

@@ -1,0 +1,21 @@
+#inner-content.profile {
+	.user-avatar {display:block; float:left; width:25%; padding:0 25px 0 0; .box-sizing;
+		img {display:block; width:100%; height:auto;}
+	}
+	.user-info {float:left; width:75%;}
+	.user-name {font-weight:@bold-weight; margin:0 0 15px; border-bottom:1px solid @lighter-gray; color:@blue; .text-stroke(@blue);
+		a {border:0; color:@blue;
+			&.twitter {font-size:@h3-size; border-bottom:1px solid @light-pink; vertical-align:bottom;}
+		}
+	}
+	.item-list-tabs {
+		ul {
+			li {display:inline-block; margin:0;
+				&:after {content:"-"; color:@light-gray; display:inline-block; margin:0 5px 0 5px;}
+				&:last-child {
+					&:after {content:"";}
+				}
+			}
+		}
+	}
+}
