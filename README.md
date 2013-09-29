@@ -15,3 +15,5 @@ If you need a free LESS compiler, use [SimpLESS](http://wearekiss.com/simpless).
 * Advanced Custom Fields
 * Advanced Excerpt
 * AI Twitter Feed
+* BuddyPress
+* BuddyPress Portfolio
