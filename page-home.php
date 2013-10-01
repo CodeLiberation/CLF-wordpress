@@ -15,10 +15,10 @@ Template Name: Home Page
 				<?php get_sidebar(); ?>
 				<div id="inner-content" class="wrap clearfix">
 
-					<!-- <section class="entry-content events-classes clearfix" itemprop="articleBody">
+					<section class="entry-content events-classes clearfix" itemprop="articleBody">
 						<header class="article-header index-hero">
 							<h2><?php the_field('events_&_classes_header_text'); ?></h2>
-						</header>
+						</header> <!-- end article header -->
 						<?php
 						 $events = eo_get_events(array(
 						         'numberposts'=>3,
@@ -69,7 +69,7 @@ Template Name: Home Page
 						  endif;
 						 ?>
 						<footer>
-							<a href="<?php echo home_url(); ?>/events-classes"><?php the_field('events_&_classes_link'); ?></a> --> <!-- - <a href="#"><?php the_field('video_tutorials_link'); ?></a> -->
+							<a href="<?php echo home_url(); ?>/events-classes"><?php the_field('events_&_classes_link'); ?></a> <!-- - <a href="#"><?php the_field('video_tutorials_link'); ?></a> -->
 						</footer>
 					</section> <!-- end article section -->
 					
