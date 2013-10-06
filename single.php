@@ -2,7 +2,7 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap clearfix">
+				<div id="inner-content" class="wrap clearfix blog">
 
 					<div id="main" class="clearfix" role="main">
 
@@ -14,7 +14,7 @@
 
 									<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 									<p class="byline vcard"><?php
-										printf(__('Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>. Filed under:%4$s.', 'bonestheme'), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), bones_get_the_author_posts_link(), get_the_category_list(', '));
+										printf(__('Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>. Filed under: %4$s.', 'bonestheme'), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), bones_get_the_author_posts_link(), get_the_category_list(', '));
 									?></p>
 
 								</header> <!-- end article header -->
@@ -57,4 +57,4 @@
 
 			</div> <!-- end #content -->
 
-<?php get_footer(); ?>
+<?php get_footer("blog-inner"); ?>

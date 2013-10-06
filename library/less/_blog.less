@@ -1,0 +1,11 @@
+#inner-content.blog {
+	article.post {
+		+ article.post {margin-top:40px; padding-top:25px; border-top:1px dashed @blue;}
+		p {
+			&:not(.byline) {
+				&:first-child {margin-top:0;}
+				&:last-child {margin-bottom:0;}
+			}
+		}
+	}
+}

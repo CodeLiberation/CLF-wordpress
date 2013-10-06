@@ -4495,6 +4495,17 @@ input[type="submit"]:active {
   border-radius: 100px;
   font-size: 11px;
 }
+#inner-content.blog article.post + article.post {
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px dashed #5bc8e4;
+}
+#inner-content.blog article.post p:not(.byline):first-child {
+  margin-top: 0;
+}
+#inner-content.blog article.post p:not(.byline):last-child {
+  margin-bottom: 0;
+}
 /*
 SMALLER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
