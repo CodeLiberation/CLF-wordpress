@@ -18,6 +18,8 @@ Template Name: Events & Classes
 							 $events = eo_get_events(array(
 							         //'event_start_after'=>'today',
 							         'showpastevents'=>true,//Will be deprecated, but set it to true to play it safe.
+										'orderby'=>'eventstart',
+										'order'=> 'DESC'
 							    ));
 
 							  if($events):
