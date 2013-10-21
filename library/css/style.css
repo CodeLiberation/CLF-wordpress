@@ -5002,9 +5002,8 @@ you can add resource intensive styles.
   
   ******************************************************************/
   .home #content .entry-content.events-classes .events-classes-list li {
-    float: left;
-    width: 31.3333%;
-    margin: 0 3% 0 0;
+    /*float:left; width:31.3333%; margin:0 3% 0 0;*/
+  
   }
   .home #content .entry-content.events-classes .events-classes-list li .event-info {
     font-size: 15px;
