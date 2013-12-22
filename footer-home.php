@@ -1,7 +1,7 @@
 			<footer class="footer" role="contentinfo">
 
 				<div id="inner-footer" class="wrap clearfix">
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. <a href="<?php echo home_url(); ?>/contact">Contact us</a></p>
+					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. <a href="<?php echo home_url(); ?>/contact">Contact us</a> - <a href="<?php echo home_url(); ?>/sponsors">Our sponsors</a></p>
 
 					<nav role="navigation">
 							<?php bones_footer_links(); ?>

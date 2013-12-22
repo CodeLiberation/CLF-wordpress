@@ -37,6 +37,7 @@ and will be used across all viewports.
 html, body {
 	/* height: 100%; */
 }
+
 body {
 	font-family: @sans-serif;
 	font-size: @p-size;
@@ -376,6 +377,15 @@ and more scalable.
 				margin: 0 0 1.5em 0;
 				max-width: 100%;
 				height: auto;
+			}
+			
+			p + a {
+				display:inline-block;
+				margin-bottom:1.5em;
+				
+				img {
+					margin:0;
+				}
 			}
 
 			/*
