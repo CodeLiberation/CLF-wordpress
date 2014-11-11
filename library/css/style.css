@@ -3736,6 +3736,23 @@ input[type="submit"]:active {
 .home .hero h1 {
   color: #000000;
 }
+.home .hero .movie-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.home .hero .clf-movie {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.home .hero .video-title {
+  color: #5bc8e4;
+}
 .home .mailing-list {
   border: 0;
   padding: 0;

@@ -10,6 +10,10 @@ Template Name: Home Page
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<section class="hero">
 						<?php the_content(); ?>
+                  <h2 class="video-title">Watch our video:</h2>
+                  <div class="movie-wrapper">
+                     <iframe class="clf-movie" src="//www.youtube.com/embed/8erhDrDFnUE" frameborder="0" allowfullscreen></iframe>
+                  </div>
 					</section>
 				<?php endwhile; endif; ?>
 				<?php get_sidebar(); ?>
