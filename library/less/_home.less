@@ -1,10 +1,44 @@
 // Index page styles
+body.home-page {
+    position:relative;
+    
+    &:before {
+      content:"";
+      background: url(../../assets/img/phoenix_class.jpg) no-repeat;
+      background-size: cover;
+      background-position: top left;
+      width:100%;
+      position:absolute;
+      height:900px;
+      z-index:-1;
+      opacity:.5;
+      top:0;
+    }
+    
+    .header {
+      #logo {
+        max-width: 650px;
+        margin:35px auto 0;
+        padding:35px 35px 0;
+        background: rgba(255,255,255,.75);
+      }
+    }
+}
+
 .home {
 	#container {padding:0;}
 	.hero {
-		h1 {color:@black;}
+    padding: 35px;
+    margin-bottom:0;
+    background: rgba(255,255,255,.75);
+		
+    h1 {color:@black;}    
 	}
-	.mailing-list {border:0; padding:0;
+	.mailing-list {
+    border:0;
+    padding:35px;
+    margin-bottom:45px;
+    
 		.widget{padding:0; margin:0;}
 		label {display:none !important;}
 		.error {color:@pink; .text-stroke(@pink); margin:0 0 10px;}
@@ -45,6 +79,10 @@
 					}
 				}
 			}
+      
+      &.class-photo {
+        
+      }
 			
 			&.about {background:@blue;
 				.article-header {

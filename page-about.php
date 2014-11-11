@@ -18,7 +18,7 @@ Template Name: About
 
 	// Get the authors from the database ordered by user nicename
 		global $wpdb;
-		$query = "SELECT ID, user_nicename from $wpdb->users ORDER BY user_nicename";
+		$query = "SELECT ID, user_nicename from $wpdb->users ORDER BY -user_nicename";
 		$author_ids = $wpdb->get_results($query);
 
 	// Loop through each author

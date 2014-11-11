@@ -2504,28 +2504,22 @@ NAVIGATION STYLES
 /* .menu is clearfixed inside mixins.scss */
 .menu {
   /* end .menu ul */
-
 }
 .menu ul {
   /* end .menu ul li */
-
   /* highlight current page */
-
   /* end current highlighters */
-
 }
 .menu ul li {
   /*
 				plan your menus and drop-downs wisely.
 				*/
-
 }
 .menu ul li a {
   /*
 					you can use hover styles here even though this size
 					has the possibility of being a mobile device.
 					*/
-
 }
 /* end .menu */
 /*********************
@@ -2534,7 +2528,6 @@ POSTS & CONTENT STYLES
 /* entry content */
 .entry-content {
   /* at this larger size, we can start to align images */
-
 }
 .entry-content .alignleft,
 .entry-content img.alignleft {
@@ -2688,7 +2681,6 @@ HEADER STYLES
   /*********************
 NAVIGATION STYLES
 *********************/
-
 }
 .header nav ul.nav {
   border: 0;
@@ -2726,19 +2718,14 @@ NAVIGATION STYLES
 }
 .header .inner-header {
   /* end .menu ul li */
-
   /* highlight current page */
-
   /* end current highlighters */
-
 }
 .header .inner-header .nav {
   /*
 		plan your menus and drop-downs wisely.
 		*/
-
   /* showing sub-menus */
-
 }
 .header .inner-header .nav ul.sub-menu,
 .header .inner-header .nav ul.children {
@@ -2749,7 +2736,6 @@ NAVIGATION STYLES
   display: none;
   z-index: 8999;
   /* highlight sub-menu current page */
-
 }
 .header .inner-header .nav ul.sub-menu li,
 .header .inner-header .nav ul.children li {
@@ -2758,7 +2744,6 @@ NAVIGATION STYLES
 				just remember deeper menus suck
 				for usability. k, bai.
 				*/
-
 }
 .header .inner-header .nav ul.sub-menu li a,
 .header .inner-header .nav ul.children li a {
@@ -2794,7 +2779,6 @@ SIDEBARS & ASIDES
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
-
 }
 .widget ul li ul {
   margin-top: 0.75em;
@@ -2825,29 +2809,11 @@ mobile. Make sure to double check these!
 			it's very rare to have multi-depth menus in
 			the footer.
 			*/
-
 }
 /* end .footer-links */
 /*********************
 Special styles
 *********************/
-.home #content .entry-content.about .area-content ul:first-child {
-  width: 30%;
-  float: left;
-  margin: 0 2% 0 0;
-}
-.home #content .entry-content.about .area-content ul:first-child li {
-  width: 100%;
-  margin-right: 0;
-  float: none;
-}
-.home #content .entry-content.about .area-content ul:first-child li a {
-  max-height: 230px;
-}
-.home #content .entry-content.about .area-content > p + ul {
-  width: 68%;
-  float: left;
-}
 .home #content .entry-content.about .area-content > p + ul li {
   height: 145px;
   width: 31.6666%;
@@ -2889,7 +2855,6 @@ be seen on the Desktop.
 ******************************************************************/
 .home #content .entry-content.events-classes .events-classes-list li {
   /*float:left; width:31.3333%; margin:0 3% 0 0;*/
-
 }
 .home #content .entry-content.events-classes .events-classes-list li .event-info {
   font-size: 15px;
@@ -2901,18 +2866,6 @@ be seen on the Desktop.
   margin: 0 auto;
   width: 200px;
   text-align: center;
-}
-.home #content .entry-content.about .area-content ul:first-child {
-  width: 20%;
-  float: left;
-  margin: 0 1% 0 0;
-}
-.home #content .entry-content.about .area-content ul:first-child li a {
-  max-height: 175px;
-}
-.home #content .entry-content.about .area-content > p + ul {
-  width: 79%;
-  float: left;
 }
 .home #content .entry-content.about .area-content > p + ul li {
   height: 145px;

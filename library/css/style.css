@@ -3730,15 +3730,42 @@ input[type="submit"]:focus {
 input[type="submit"]:active {
   background: #2fb9dd;
 }
+body.home-page {
+  position: relative;
+}
+body.home-page:before {
+  content: "";
+  background: url(../../assets/img/phoenix_class.jpg) no-repeat;
+  background-size: cover;
+  background-position: top left;
+  width: 100%;
+  position: absolute;
+  height: 900px;
+  z-index: -1;
+  opacity: .5;
+  top: 0;
+}
+body.home-page .header #logo {
+  max-width: 650px;
+  margin: 35px auto 0;
+  padding: 35px 35px 0;
+  background: rgba(255, 255, 255, 0.75);
+}
 .home #container {
   padding: 0;
+}
+.home .hero {
+  padding: 35px;
+  margin-bottom: 0;
+  background: rgba(255, 255, 255, 0.75);
 }
 .home .hero h1 {
   color: #000000;
 }
 .home .mailing-list {
   border: 0;
-  padding: 0;
+  padding: 35px;
+  margin-bottom: 45px;
 }
 .home .mailing-list .widget {
   padding: 0;
@@ -4867,23 +4894,6 @@ mobile. Make sure to double check these!
   /*********************
 Special styles
 *********************/
-  .home #content .entry-content.about .area-content ul:first-child {
-    width: 30%;
-    float: left;
-    margin: 0 2% 0 0;
-  }
-  .home #content .entry-content.about .area-content ul:first-child li {
-    width: 100%;
-    margin-right: 0;
-    float: none;
-  }
-  .home #content .entry-content.about .area-content ul:first-child li a {
-    max-height: 230px;
-  }
-  .home #content .entry-content.about .area-content > p + ul {
-    width: 68%;
-    float: left;
-  }
   .home #content .entry-content.about .area-content > p + ul li {
     height: 145px;
     width: 31.6666%;
@@ -4945,18 +4955,6 @@ be seen on the Desktop.
     width: 200px;
     text-align: center;
   }
-  .home #content .entry-content.about .area-content ul:first-child {
-    width: 20%;
-    float: left;
-    margin: 0 1% 0 0;
-  }
-  .home #content .entry-content.about .area-content ul:first-child li a {
-    max-height: 175px;
-  }
-  .home #content .entry-content.about .area-content > p + ul {
-    width: 79%;
-    float: left;
-  }
   .home #content .entry-content.about .area-content > p + ul li {
     height: 145px;
     width: 24.25%;
@@ -5000,14 +4998,6 @@ You can add some advanced styles here if you like. This kicks in
 on larger screens.
 
 ******************************************************************/
-  .home #content .entry-content.about .area-content ul:first-child {
-    width: 16%;
-    float: left;
-  }
-  .home #content .entry-content.about .area-content > p + ul {
-    width: 83%;
-    float: left;
-  }
   .home #content .entry-content.social-media .imgdisplay {
     height: 145px;
     width: 24.25%;
