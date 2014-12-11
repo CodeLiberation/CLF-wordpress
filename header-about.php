@@ -45,7 +45,7 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-
+      <?php include_once("analyticstracking.php") ?>
 		<div id="about-container">
 
 			<header class="header" role="banner">

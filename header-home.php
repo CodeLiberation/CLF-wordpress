@@ -35,12 +35,13 @@
 		<!-- end of wordpress head -->
 
 		<!-- drop Google Analytics Here -->
+      <meta name="google-site-verification" content="T8KeeIcWOsGUJde_e3FseIu2xVoXTNuVjAU9adR3AzQ" />
 		<!-- end analytics -->
 
 	</head>
 
 	<body <?php body_class(); ?>>
-
+      <?php include_once("analyticstracking.php") ?>
 		<div id="container">
 
 			<header class="header" role="banner">
